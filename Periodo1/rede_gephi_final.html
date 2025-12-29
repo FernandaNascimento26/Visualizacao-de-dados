@@ -1,0 +1,2681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rede de Coordenação WhatsApp</title>
+</head>
+<body>
+
+
+<!-- Load require.js. Delete this if your page already loads require.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+<script type="application/vnd.jupyter.widget-state+json">
+{
+  "version_major": 2,
+  "version_minor": 0,
+  "state": {
+    "bac75b6df1c444c5a1409e62499b58c9": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "c89e786a83c64b208eba0cd3cecf8e2c": {
+      "model_name": "ProgressStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "b1c8ec52a86a4b66b58a8e573b1c8c63": {
+      "model_name": "FloatProgressModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "bar_style": "success",
+        "layout": "IPY_MODEL_bac75b6df1c444c5a1409e62499b58c9",
+        "max": 260153.0,
+        "style": "IPY_MODEL_c89e786a83c64b208eba0cd3cecf8e2c",
+        "value": 260153.0
+      }
+    },
+    "87a3f812caa94815ada5cadf5aff2cfb": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "2b26a9430ecb4b6692a7fde92cdce6a5": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "2028e0ed3f1a4076bdb240ec28989bd3": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_87a3f812caa94815ada5cadf5aff2cfb",
+        "style": "IPY_MODEL_2b26a9430ecb4b6692a7fde92cdce6a5",
+        "value": "100%"
+      }
+    },
+    "04cff767703a4a879313134072a67989": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "76e0e6dd44bb426585cfd7ad57003222": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "f5393e625eea4d678010088170f0e4d9": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_04cff767703a4a879313134072a67989",
+        "style": "IPY_MODEL_76e0e6dd44bb426585cfd7ad57003222",
+        "value": "\u2007260153/260153\u2007[00:52&lt;00:00,\u20075637.06it/s]"
+      }
+    },
+    "9826e423536047dca6c016f69cb151ee": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "7781e0c9716841e79ab65090e96e38c1": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_2028e0ed3f1a4076bdb240ec28989bd3",
+          "IPY_MODEL_b1c8ec52a86a4b66b58a8e573b1c8c63",
+          "IPY_MODEL_f5393e625eea4d678010088170f0e4d9"
+        ],
+        "layout": "IPY_MODEL_9826e423536047dca6c016f69cb151ee"
+      }
+    },
+    "9a22209a71a84d2bbeff5c5e56da0098": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "2b83177a41c4456d972b1c1fa4da66f2": {
+      "model_name": "ProgressStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "76cb2b1bab7f458d8e35fa1365dcf3cd": {
+      "model_name": "FloatProgressModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "bar_style": "success",
+        "layout": "IPY_MODEL_9a22209a71a84d2bbeff5c5e56da0098",
+        "max": 24564.0,
+        "style": "IPY_MODEL_2b83177a41c4456d972b1c1fa4da66f2",
+        "value": 24564.0
+      }
+    },
+    "620a276610954ff3b39ac370716ddc76": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "93ece633302947f1aa9e2e8696981c73": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "8ba07908f2cf4953b57480d1e0b7526e": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_620a276610954ff3b39ac370716ddc76",
+        "style": "IPY_MODEL_93ece633302947f1aa9e2e8696981c73",
+        "value": "Sondando:\u2007100%"
+      }
+    },
+    "4ce7203b6f7c4831936e245953881e45": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "76bcbe6122344bf6acd8a219509f6232": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "cf6cd6e8ca1149b394259e5ddfbfc8d5": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_4ce7203b6f7c4831936e245953881e45",
+        "style": "IPY_MODEL_76bcbe6122344bf6acd8a219509f6232",
+        "value": "\u200724564/24564\u2007[00:08&lt;00:00,\u20072767.85it/s]"
+      }
+    },
+    "b2d4aea6a09340e78b456b5b7c025aff": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "c90faa3f006f42718e85216941b11e86": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_8ba07908f2cf4953b57480d1e0b7526e",
+          "IPY_MODEL_76cb2b1bab7f458d8e35fa1365dcf3cd",
+          "IPY_MODEL_cf6cd6e8ca1149b394259e5ddfbfc8d5"
+        ],
+        "layout": "IPY_MODEL_b2d4aea6a09340e78b456b5b7c025aff"
+      }
+    },
+    "2905aedfb0aa46e1807d83c60735d2a2": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "383e724cd345493c8994d471fc5a2fbc": {
+      "model_name": "ProgressStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "2895b6289bd64daba5a302b93769a132": {
+      "model_name": "FloatProgressModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "bar_style": "success",
+        "layout": "IPY_MODEL_2905aedfb0aa46e1807d83c60735d2a2",
+        "max": 122816.0,
+        "style": "IPY_MODEL_383e724cd345493c8994d471fc5a2fbc",
+        "value": 122816.0
+      }
+    },
+    "c52ad9c5cf9445ed9a2977f3a689754d": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "724d45d9c03947eb9a244995376232d3": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "e518aaf3ed724625a251e38afd8a6cfe": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_c52ad9c5cf9445ed9a2977f3a689754d",
+        "style": "IPY_MODEL_724d45d9c03947eb9a244995376232d3",
+        "value": "Coletando\u2007offset\u2007+1:\u2007100%"
+      }
+    },
+    "b7eb6b43646c4cd6b7b1b0d6ea9ecf3b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "66e670a323fe4895835c435861baa354": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "1a2d97b8fe6c4c5389e72174ed3f7ec4": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_b7eb6b43646c4cd6b7b1b0d6ea9ecf3b",
+        "style": "IPY_MODEL_66e670a323fe4895835c435861baa354",
+        "value": "\u2007122816/122816\u2007[00:44&lt;00:00,\u20072634.84it/s]"
+      }
+    },
+    "13372d240ea44e53b330e9c4fc4b5ed4": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "34a67fee93dd479bb6cdd068791f6509": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_e518aaf3ed724625a251e38afd8a6cfe",
+          "IPY_MODEL_2895b6289bd64daba5a302b93769a132",
+          "IPY_MODEL_1a2d97b8fe6c4c5389e72174ed3f7ec4"
+        ],
+        "layout": "IPY_MODEL_13372d240ea44e53b330e9c4fc4b5ed4"
+      }
+    },
+    "5743e03fdcf8450981034432df5ef8a2": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "7dc6735629f1416f9c10413d8bd7a7e5": {
+      "model_name": "ProgressStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "8030754488fa4d03aa34a12f0d4f8f10": {
+      "model_name": "FloatProgressModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "bar_style": "success",
+        "layout": "IPY_MODEL_5743e03fdcf8450981034432df5ef8a2",
+        "max": 122815.0,
+        "style": "IPY_MODEL_7dc6735629f1416f9c10413d8bd7a7e5",
+        "value": 122815.0
+      }
+    },
+    "b8f15e34e0ff455b814bca2e24848c1b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "1cf1c752c8ba49dda205a4e35b798a9a": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "fb6b4e4b40ac4f96bc60013c3c614f34": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_b8f15e34e0ff455b814bca2e24848c1b",
+        "style": "IPY_MODEL_1cf1c752c8ba49dda205a4e35b798a9a",
+        "value": "Coletando\u2007offset\u2007+2:\u2007100%"
+      }
+    },
+    "9cfd0f5057414ef08fcbb31299a45cbf": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "d5084e6cbdb54d83896580a119cb8f21": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "b6a2c02452fb4aff86aeb57c1fabc9da": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_9cfd0f5057414ef08fcbb31299a45cbf",
+        "style": "IPY_MODEL_d5084e6cbdb54d83896580a119cb8f21",
+        "value": "\u2007122815/122815\u2007[00:45&lt;00:00,\u20072535.29it/s]"
+      }
+    },
+    "b8208d811cde4a96999bf947392669bf": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "2985fbab4fc146f2b044cfe4b2a68707": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_fb6b4e4b40ac4f96bc60013c3c614f34",
+          "IPY_MODEL_8030754488fa4d03aa34a12f0d4f8f10",
+          "IPY_MODEL_b6a2c02452fb4aff86aeb57c1fabc9da"
+        ],
+        "layout": "IPY_MODEL_b8208d811cde4a96999bf947392669bf"
+      }
+    },
+    "933d3f49b9c741929f48f9216139fcbe": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "a11524e910f342f6a6fae2a4f5b6166a": {
+      "model_name": "ProgressStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "3122be3056754c399e685d73ceb4e2d7": {
+      "model_name": "FloatProgressModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "bar_style": "success",
+        "layout": "IPY_MODEL_933d3f49b9c741929f48f9216139fcbe",
+        "max": 122814.0,
+        "style": "IPY_MODEL_a11524e910f342f6a6fae2a4f5b6166a",
+        "value": 122814.0
+      }
+    },
+    "4c0334f2db62415f94f520bf6927fb22": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "bc972ca2a0e5413d8e29fb429c64f0ab": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "8097807518604b3abc35ef55d8674eba": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_4c0334f2db62415f94f520bf6927fb22",
+        "style": "IPY_MODEL_bc972ca2a0e5413d8e29fb429c64f0ab",
+        "value": "Coletando\u2007offset\u2007+3:\u2007100%"
+      }
+    },
+    "74104831895648fe95e4242ee8aa4a83": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "ccb8c4b6dc004affbda4b2e614dfaf1a": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "0e5249f4cb614126bd4b046aacb5e428": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_74104831895648fe95e4242ee8aa4a83",
+        "style": "IPY_MODEL_ccb8c4b6dc004affbda4b2e614dfaf1a",
+        "value": "\u2007122814/122814\u2007[00:45&lt;00:00,\u20072530.98it/s]"
+      }
+    },
+    "eea41c098ef24c5391f210457c7e24e8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "d9dab9f3b26041099f945bed4b9847a6": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_8097807518604b3abc35ef55d8674eba",
+          "IPY_MODEL_3122be3056754c399e685d73ceb4e2d7",
+          "IPY_MODEL_0e5249f4cb614126bd4b046aacb5e428"
+        ],
+        "layout": "IPY_MODEL_eea41c098ef24c5391f210457c7e24e8"
+      }
+    },
+    "64205eb7a6e4467c884288d4a831ac59": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "c9ea374fd3674edc940487169c39d0dd": {
+      "model_name": "ProgressStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "b2d04604a3fe46da82bb8d1460e00f14": {
+      "model_name": "FloatProgressModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "bar_style": "success",
+        "layout": "IPY_MODEL_64205eb7a6e4467c884288d4a831ac59",
+        "max": 122813.0,
+        "style": "IPY_MODEL_c9ea374fd3674edc940487169c39d0dd",
+        "value": 122813.0
+      }
+    },
+    "568a58a6a1694c1b988d0eb71ce51cd8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "234f473482db4a6aaa48b0960a7b5140": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "d914a3c91f8b4dffb6da1e2f9b059e92": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_568a58a6a1694c1b988d0eb71ce51cd8",
+        "style": "IPY_MODEL_234f473482db4a6aaa48b0960a7b5140",
+        "value": "Coletando\u2007offset\u2007+4:\u2007100%"
+      }
+    },
+    "7546ebfa91564fa1ab3c87c36214fa6b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "5c3597bda2b34d958f200cd9f9c72819": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "5915ffbf794c4bf3ab43afaa481f39af": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_7546ebfa91564fa1ab3c87c36214fa6b",
+        "style": "IPY_MODEL_5c3597bda2b34d958f200cd9f9c72819",
+        "value": "\u2007122813/122813\u2007[00:44&lt;00:00,\u20072604.42it/s]"
+      }
+    },
+    "0e5582ced46f46eea6ed66900bfbf17a": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "e4121f206e0843da85f73e6fbf27b09e": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_d914a3c91f8b4dffb6da1e2f9b059e92",
+          "IPY_MODEL_b2d04604a3fe46da82bb8d1460e00f14",
+          "IPY_MODEL_5915ffbf794c4bf3ab43afaa481f39af"
+        ],
+        "layout": "IPY_MODEL_0e5582ced46f46eea6ed66900bfbf17a"
+      }
+    },
+    "32298d8ea9214a309a18b09ea9deb449": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "b9f231e2b01b4fd2bdde77ac403d31fc": {
+      "model_name": "ProgressStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "f83d074df7fd45bcb701ab9b7a6d2893": {
+      "model_name": "FloatProgressModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "bar_style": "success",
+        "layout": "IPY_MODEL_32298d8ea9214a309a18b09ea9deb449",
+        "max": 122812.0,
+        "style": "IPY_MODEL_b9f231e2b01b4fd2bdde77ac403d31fc",
+        "value": 122812.0
+      }
+    },
+    "492e23e32bd449779fd8d6081496254f": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "5f87188c3c514f1994a94c477f2042ab": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "85ab183416db4ba294d3d96bfb4dfc84": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_492e23e32bd449779fd8d6081496254f",
+        "style": "IPY_MODEL_5f87188c3c514f1994a94c477f2042ab",
+        "value": "Coletando\u2007offset\u2007+5:\u2007100%"
+      }
+    },
+    "c0e16551691942ce9d6b58c345f80d3e": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "d2298d457a464792b5515a4c458059a0": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "d37cc24b98a442458263fc955f306597": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_c0e16551691942ce9d6b58c345f80d3e",
+        "style": "IPY_MODEL_d2298d457a464792b5515a4c458059a0",
+        "value": "\u2007122812/122812\u2007[00:42&lt;00:00,\u20072876.43it/s]"
+      }
+    },
+    "86c20fcb54484bd48f5e3225639170ab": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "199f3a00b06e48a7bcb0834369bff29c": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_85ab183416db4ba294d3d96bfb4dfc84",
+          "IPY_MODEL_f83d074df7fd45bcb701ab9b7a6d2893",
+          "IPY_MODEL_d37cc24b98a442458263fc955f306597"
+        ],
+        "layout": "IPY_MODEL_86c20fcb54484bd48f5e3225639170ab"
+      }
+    },
+    "a87c837561484b228e8a729b248dc8bb": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "c61562ab588b4ee99b16a4b89afdea49": {
+      "model_name": "ProgressStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "9180ef7c259243bfa5b32aab1acc8b85": {
+      "model_name": "FloatProgressModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "bar_style": "success",
+        "layout": "IPY_MODEL_a87c837561484b228e8a729b248dc8bb",
+        "max": 122807.0,
+        "style": "IPY_MODEL_c61562ab588b4ee99b16a4b89afdea49",
+        "value": 122807.0
+      }
+    },
+    "142f964e782747d1970485383ef4c96d": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "0b98e9bb1d4c4224b90bf08f8da70513": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "8cef0b3bc08f4d70b7301f7161499f8d": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_142f964e782747d1970485383ef4c96d",
+        "style": "IPY_MODEL_0b98e9bb1d4c4224b90bf08f8da70513",
+        "value": "Coletando\u2007offset\u2007+10:\u2007100%"
+      }
+    },
+    "26edb7a0e0e44140b8d7fa0b8850073a": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "679ca436031f4b4b9d5dcb9346c65812": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "b3826285ae4f4256ba3e571a3bc4a8ee": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_26edb7a0e0e44140b8d7fa0b8850073a",
+        "style": "IPY_MODEL_679ca436031f4b4b9d5dcb9346c65812",
+        "value": "\u2007122807/122807\u2007[00:42&lt;00:00,\u20072625.51it/s]"
+      }
+    },
+    "f6d868ac3af840c38a20be6a8dd637b0": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "d360145167c54b7e897610829982705c": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_8cef0b3bc08f4d70b7301f7161499f8d",
+          "IPY_MODEL_9180ef7c259243bfa5b32aab1acc8b85",
+          "IPY_MODEL_b3826285ae4f4256ba3e571a3bc4a8ee"
+        ],
+        "layout": "IPY_MODEL_f6d868ac3af840c38a20be6a8dd637b0"
+      }
+    },
+    "e5460c4adf664a10ab55c20557d2ec31": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "41d8c95fb6d54be4922d22b9a7830e1e": {
+      "model_name": "ProgressStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "ed36b1c400344ab3b890aaeff639b99c": {
+      "model_name": "FloatProgressModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "bar_style": "success",
+        "layout": "IPY_MODEL_e5460c4adf664a10ab55c20557d2ec31",
+        "max": 122817.0,
+        "style": "IPY_MODEL_41d8c95fb6d54be4922d22b9a7830e1e",
+        "value": 122817.0
+      }
+    },
+    "89bc4788614a485e954ce32205bd1118": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "07dbefc5ec7a4ddabfe101de4900f762": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "90bd6d7709614f2c8ff2e58fb684a6d2": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_89bc4788614a485e954ce32205bd1118",
+        "style": "IPY_MODEL_07dbefc5ec7a4ddabfe101de4900f762",
+        "value": "Processando\u2007janelas:\u2007100%"
+      }
+    },
+    "c9cf296e15614f7f84cad240c6ef7eb8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "48c372e002524646b3b41fcb6f50768a": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "8ef25cbaaa93403096f0cad4932cf997": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_c9cf296e15614f7f84cad240c6ef7eb8",
+        "style": "IPY_MODEL_48c372e002524646b3b41fcb6f50768a",
+        "value": "\u2007122817/122817\u2007[00:37&lt;00:00,\u20072653.00it/s]"
+      }
+    },
+    "1a537bb441e1444abfd798c2fdcbec04": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "4b0e257cd3184fa99fb64af3b97747bf": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_90bd6d7709614f2c8ff2e58fb684a6d2",
+          "IPY_MODEL_ed36b1c400344ab3b890aaeff639b99c",
+          "IPY_MODEL_8ef25cbaaa93403096f0cad4932cf997"
+        ],
+        "layout": "IPY_MODEL_1a537bb441e1444abfd798c2fdcbec04"
+      }
+    },
+    "34a2af3a5e484b4bb989b867e3d81c37": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "4328f02335b84277a536dd0335e1e2e1": {
+      "model_name": "ProgressStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "88eeec2eb51c414497402600d040ad1e": {
+      "model_name": "FloatProgressModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "bar_style": "success",
+        "layout": "IPY_MODEL_34a2af3a5e484b4bb989b867e3d81c37",
+        "max": 968.0,
+        "style": "IPY_MODEL_4328f02335b84277a536dd0335e1e2e1",
+        "value": 968.0
+      }
+    },
+    "61321faad3e6421baff0cceac5316da2": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "7b66777abb7b4789ae6c5b4290850b68": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "7133f3ceb74b41778e77c370f140bbd3": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_61321faad3e6421baff0cceac5316da2",
+        "style": "IPY_MODEL_7b66777abb7b4789ae6c5b4290850b68",
+        "value": "Batches:\u2007100%"
+      }
+    },
+    "27a2c116cf884bf0a1300dfe4809a0eb": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "494fab6844444c95bfe8fdf05725296a": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "31a970f113594161b3ce5231725bfb27": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_27a2c116cf884bf0a1300dfe4809a0eb",
+        "style": "IPY_MODEL_494fab6844444c95bfe8fdf05725296a",
+        "value": "\u2007968/968\u2007[00:22&lt;00:00,\u200757.79it/s]"
+      }
+    },
+    "661b18f5074e453fb1f3d85dada190ba": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "be1773fb9a6644db9a2368959e2a6d32": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_7133f3ceb74b41778e77c370f140bbd3",
+          "IPY_MODEL_88eeec2eb51c414497402600d040ad1e",
+          "IPY_MODEL_31a970f113594161b3ce5231725bfb27"
+        ],
+        "layout": "IPY_MODEL_661b18f5074e453fb1f3d85dada190ba"
+      }
+    },
+    "bf3216f45fd4408bbf8223f0b0a28b47": {
+      "model_name": "SigmaModel",
+      "model_module": "ipysigma",
+      "model_module_version": "^0.24.6",
+      "state": {
+        "_dom_classes": [],
+        "background_color": "#111111",
+        "camera_state": {
+          "ratio": 1,
+          "x": 0.5,
+          "y": 0.5,
+          "angle": 0
+        },
+        "data": {
+          "nodes": [
+            {
+              "key": "b6242381059f781a69bc6d7b4803c25b",
+              "attributes": {
+                "comunidade": 2,
+                "tamanho_grau": 72
+              }
+            },
+            {
+              "key": "cebd2107ff2001db85851cc0e81e0667",
+              "attributes": {
+                "comunidade": 2,
+                "tamanho_grau": 127
+              }
+            },
+            {
+              "key": "cc6159f6cba2557219c44c8ce2c66497",
+              "attributes": {
+                "comunidade": 5,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "d3fdc86e76517947b9a31ed48783312d",
+              "attributes": {
+                "comunidade": 5,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "2b13a412f0b0fc993c69b6f3816e1f89",
+              "attributes": {
+                "comunidade": 5,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "4ea1b3ee637da811b7d2d0df32db21f9",
+              "attributes": {
+                "comunidade": 6,
+                "tamanho_grau": 260
+              }
+            },
+            {
+              "key": "ef496106907ece8b169c6219e5470b2c",
+              "attributes": {
+                "comunidade": 6,
+                "tamanho_grau": 247
+              }
+            },
+            {
+              "key": "32bc3dcc7950c148d4e122043d3d16f3",
+              "attributes": {
+                "comunidade": 9,
+                "tamanho_grau": 17
+              }
+            },
+            {
+              "key": "7b50eb6b7d09bdc35e4ec94cbe0d932a",
+              "attributes": {
+                "comunidade": 10,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "d419710cc29495da65a260ede986c963",
+              "attributes": {
+                "comunidade": 10,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "19654cb7d7e6914273cb101436032994",
+              "attributes": {
+                "comunidade": 2,
+                "tamanho_grau": 60
+              }
+            },
+            {
+              "key": "a268f4bf46e38a7ef0c2850719c0427d",
+              "attributes": {
+                "comunidade": 10,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "9c1bd60e5a8716769110261dc03ea2ce",
+              "attributes": {
+                "comunidade": 13,
+                "tamanho_grau": 6
+              }
+            },
+            {
+              "key": "c2d79a022bacaf201582c68a910adc72",
+              "attributes": {
+                "comunidade": 13,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "476dc4530cd9d016c8ba93a241a640a2",
+              "attributes": {
+                "comunidade": 10,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "636d779b3346efeaf0afa0818981f356",
+              "attributes": {
+                "comunidade": 10,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "7ecca0bbe837169523936eb92f4b4677",
+              "attributes": {
+                "comunidade": 9,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "cd45e9e743ddcb9a94f61619300539a9",
+              "attributes": {
+                "comunidade": 9,
+                "tamanho_grau": 16
+              }
+            },
+            {
+              "key": "4498c0653cccf6599c7be11dab1eb62f",
+              "attributes": {
+                "comunidade": 9,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "51a743e7e3599798246fadc8bcfe528e",
+              "attributes": {
+                "comunidade": 9,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "211a2dbcf44b6bd0742cda56af511c6e",
+              "attributes": {
+                "comunidade": 19,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "22610b1051d50403b051eba63bd73724",
+              "attributes": {
+                "comunidade": 19,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "2d7673ac7b2ccae615e07c96a25594ae",
+              "attributes": {
+                "comunidade": 30,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "b61dc25e3872a878e68bde55686aa783",
+              "attributes": {
+                "comunidade": 30,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "a5a16db056020680a528417269741aec",
+              "attributes": {
+                "comunidade": 30,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "71bb50832d088324f4f4ca27a8235036",
+              "attributes": {
+                "comunidade": 9,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "218131c9ccc6fb6cacc73f2f48927d6b",
+              "attributes": {
+                "comunidade": 25,
+                "tamanho_grau": 10
+              }
+            },
+            {
+              "key": "de835c6c54fd3057e1dc3b06d49bb139",
+              "attributes": {
+                "comunidade": 25,
+                "tamanho_grau": 7
+              }
+            },
+            {
+              "key": "36de514702d7b11e580390df7fbf4fc0",
+              "attributes": {
+                "comunidade": 25,
+                "tamanho_grau": 42
+              }
+            },
+            {
+              "key": "428a2fe72cc5d33c611092fa44830226",
+              "attributes": {
+                "comunidade": 25,
+                "tamanho_grau": 10
+              }
+            },
+            {
+              "key": "0f601498e40c41072042d0f17974d3ba",
+              "attributes": {
+                "comunidade": 2,
+                "tamanho_grau": 40
+              }
+            },
+            {
+              "key": "06226bf2e787fb846d4385f780bdc767",
+              "attributes": {
+                "comunidade": 38,
+                "tamanho_grau": 5
+              }
+            },
+            {
+              "key": "122a72945dc64c8d93e3c64a0a28699f",
+              "attributes": {
+                "comunidade": 38,
+                "tamanho_grau": 6
+              }
+            },
+            {
+              "key": "fb183c60c98ab793b11c940b8d62f994",
+              "attributes": {
+                "comunidade": 6,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "c5fff63b6151f93e1ce86d12f8acbee1",
+              "attributes": {
+                "comunidade": 30,
+                "tamanho_grau": 14
+              }
+            },
+            {
+              "key": "de51d45081b82e917cec8afbd36b2864",
+              "attributes": {
+                "comunidade": 30,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "07886446c247183e3a7bf03d01c3a73a",
+              "attributes": {
+                "comunidade": 2,
+                "tamanho_grau": 9
+              }
+            },
+            {
+              "key": "1d881329d21d9e5d9224d73b88559a4d",
+              "attributes": {
+                "comunidade": 25,
+                "tamanho_grau": 3
+              }
+            },
+            {
+              "key": "dc9ee5ce910f2d5d625acacd1670082a",
+              "attributes": {
+                "comunidade": 2,
+                "tamanho_grau": 5
+              }
+            },
+            {
+              "key": "6ef412f2bc574c4b5724d70a63e43532",
+              "attributes": {
+                "comunidade": 30,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "d7e837ad8409673341f42da837be915d",
+              "attributes": {
+                "comunidade": 9,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "6a238c5f296b4d74a831bb12e737867b",
+              "attributes": {
+                "comunidade": 2,
+                "tamanho_grau": 5
+              }
+            },
+            {
+              "key": "c25a782c2e19b5f6dcbbc0cbb43384f2",
+              "attributes": {
+                "comunidade": 38,
+                "tamanho_grau": 7
+              }
+            },
+            {
+              "key": "3da96f142272f958e175363c321f8b0b",
+              "attributes": {
+                "comunidade": 25,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "41f90871a9bbcdda9329fae96c16a91a",
+              "attributes": {
+                "comunidade": 25,
+                "tamanho_grau": 10
+              }
+            },
+            {
+              "key": "f016cc514cc43b727ef9901b24c5c84b",
+              "attributes": {
+                "comunidade": 25,
+                "tamanho_grau": 5
+              }
+            },
+            {
+              "key": "3311fffd95f32b1e78742e7838ea7424",
+              "attributes": {
+                "comunidade": 38,
+                "tamanho_grau": 18
+              }
+            },
+            {
+              "key": "52837298444135716c52d69497110deb",
+              "attributes": {
+                "comunidade": 38,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "ae5e226c9049597aa1e55bea1f841733",
+              "attributes": {
+                "comunidade": 38,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "259996fca79145b3d9f7530cb07c1ed1",
+              "attributes": {
+                "comunidade": 38,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "79262e3dcbb1408a7f7799f7636a6cec",
+              "attributes": {
+                "comunidade": 38,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "55bd4c4fdc1e79f2bd49bd1d4ec71ccc",
+              "attributes": {
+                "comunidade": 13,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "de43b5a7bef0a5bf4236e47ca4e3a760",
+              "attributes": {
+                "comunidade": 13,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "67c7dc338f0c3089cb68771691fdef17",
+              "attributes": {
+                "comunidade": 9,
+                "tamanho_grau": 5
+              }
+            },
+            {
+              "key": "bf19c62b0d9b4e95dfcb3188902b089c",
+              "attributes": {
+                "comunidade": 9,
+                "tamanho_grau": 6
+              }
+            },
+            {
+              "key": "1503b9cbc97c53fa03f3dbbd284ec806",
+              "attributes": {
+                "comunidade": 9,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "45a80ed826e54d6e428d6cf821c63263",
+              "attributes": {
+                "comunidade": 9,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "9c2981bc2a53f674c97a32144e94949f",
+              "attributes": {
+                "comunidade": 38,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "bc088fdf7259cbbc2328b502f8f4509b",
+              "attributes": {
+                "comunidade": 38,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "6eebc126e555ebf3a3a6112d007baeb9",
+              "attributes": {
+                "comunidade": 38,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "62c8c1b2adf9f826a33f599479a905e3",
+              "attributes": {
+                "comunidade": 44,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "a56ea8882738b3d4c77c64704b1d8244",
+              "attributes": {
+                "comunidade": 44,
+                "tamanho_grau": 14
+              }
+            },
+            {
+              "key": "96e4c87999e8c9df8bdcc797b5a8901d",
+              "attributes": {
+                "comunidade": 44,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "dd072792958e2616f25c42541f1176a5",
+              "attributes": {
+                "comunidade": 44,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "0eb4e40717540e32926063888c310444",
+              "attributes": {
+                "comunidade": 44,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "4210e63abf4843538ca9490fbdb84618",
+              "attributes": {
+                "comunidade": 44,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "a56700218fabeed3d2c511164ba3c4b2",
+              "attributes": {
+                "comunidade": 44,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "08c3a51e6df05754fc47024fb839c756",
+              "attributes": {
+                "comunidade": 46,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "f1e3ecf55d688708a54cab4c1614438b",
+              "attributes": {
+                "comunidade": 46,
+                "tamanho_grau": 6
+              }
+            },
+            {
+              "key": "247712e6c3f2f3f60c827a9b12da872e",
+              "attributes": {
+                "comunidade": 46,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "29f08b8da2a44c14d5dbcde9f54d8fe7",
+              "attributes": {
+                "comunidade": 46,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "40fc8017558ed4bfab67d44632f36bd7",
+              "attributes": {
+                "comunidade": 47,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "7786666ece918b5d28d9cca35cc91fb1",
+              "attributes": {
+                "comunidade": 47,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "bb9d4c2cef154c78eb4e95d7797dbe71",
+              "attributes": {
+                "comunidade": 47,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "15a43417c6dc89409323af5d23e4a05f",
+              "attributes": {
+                "comunidade": 48,
+                "tamanho_grau": 5
+              }
+            },
+            {
+              "key": "b161a8fd51d7eb3f91933afd610dcf9c",
+              "attributes": {
+                "comunidade": 48,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "a52d83df025decbe490829dd59e06bd5",
+              "attributes": {
+                "comunidade": 48,
+                "tamanho_grau": 3
+              }
+            },
+            {
+              "key": "f42911f5813da499858e57152911964c",
+              "attributes": {
+                "comunidade": 25,
+                "tamanho_grau": 3
+              }
+            },
+            {
+              "key": "e5cbbbb42078a62af1fdc0c2fd6e5e49",
+              "attributes": {
+                "comunidade": 9,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "49c96b0e7a9f58c83d1e46d2fb333c43",
+              "attributes": {
+                "comunidade": 42,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "8af9e06deed7d185467f04b886ea7239",
+              "attributes": {
+                "comunidade": 42,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "2d96612244862a5e77737d3dafd59306",
+              "attributes": {
+                "comunidade": 45,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "3ca666ed61cb40e6eb2d5bf456378dba",
+              "attributes": {
+                "comunidade": 45,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "6fc5fc52abe783e90f08b3b053b3ae6b",
+              "attributes": {
+                "comunidade": 25,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "81ab40dc2d7538651b790762fb0dd440",
+              "attributes": {
+                "comunidade": 19,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "1dd1be63d7ad2f0c6242994f5c4e2f6e",
+              "attributes": {
+                "comunidade": 45,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "900a21af59c62fd94d55897fc50e044c",
+              "attributes": {
+                "comunidade": 30,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "72c138549eab70677c11388360edfcef",
+              "attributes": {
+                "comunidade": 30,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "cb400cf0d3279925e4d1aef520576d54",
+              "attributes": {
+                "comunidade": 25,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "0903358ac0da43fabd08de2f7e7fc47e",
+              "attributes": {
+                "comunidade": 44,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "b47ca91d0726e1748ababe4ea5b73996",
+              "attributes": {
+                "comunidade": 25,
+                "tamanho_grau": 6
+              }
+            },
+            {
+              "key": "04bce58ed268aa56cea0cee26255d86a",
+              "attributes": {
+                "comunidade": 30,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "2e19555f6d01e41a4f08f72a6d1f92c7",
+              "attributes": {
+                "comunidade": 38,
+                "tamanho_grau": 4
+              }
+            },
+            {
+              "key": "384dbf1274f43941625d77844fac4055",
+              "attributes": {
+                "comunidade": 6,
+                "tamanho_grau": 3
+              }
+            },
+            {
+              "key": "0be31efb9a12e10f8a84b8b291b1cd12",
+              "attributes": {
+                "comunidade": 38,
+                "tamanho_grau": 6
+              }
+            },
+            {
+              "key": "0defc93dd6d23f2e59f33c18b770e995",
+              "attributes": {
+                "comunidade": 20,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "2b1282848e7c7bb897ae0605a7eb578a",
+              "attributes": {
+                "comunidade": 20,
+                "tamanho_grau": 6
+              }
+            },
+            {
+              "key": "2ad6c477e24d8adb8820fb4f419f2758",
+              "attributes": {
+                "comunidade": 6,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "c3f4235043e0a30dbd0e8bf1d7d767f7",
+              "attributes": {
+                "comunidade": 42,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "d6a00d46c002e2ae3f2606df8c3018e2",
+              "attributes": {
+                "comunidade": 25,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "2980863e997847c1e8be13aeadce9ae8",
+              "attributes": {
+                "comunidade": 44,
+                "tamanho_grau": 2
+              }
+            },
+            {
+              "key": "4cf56abda1129eff6d53c9ec16ab8621",
+              "attributes": {
+                "comunidade": 20,
+                "tamanho_grau": 4
+              }
+            }
+          ],
+          "edges": [
+            {
+              "source": "b6242381059f781a69bc6d7b4803c25b",
+              "target": "cebd2107ff2001db85851cc0e81e0667",
+              "attributes": {
+                "Weight": 46
+              }
+            },
+            {
+              "source": "b6242381059f781a69bc6d7b4803c25b",
+              "target": "19654cb7d7e6914273cb101436032994",
+              "attributes": {
+                "Weight": 17
+              }
+            },
+            {
+              "source": "b6242381059f781a69bc6d7b4803c25b",
+              "target": "dc9ee5ce910f2d5d625acacd1670082a",
+              "attributes": {
+                "Weight": 5
+              }
+            },
+            {
+              "source": "b6242381059f781a69bc6d7b4803c25b",
+              "target": "0f601498e40c41072042d0f17974d3ba",
+              "attributes": {
+                "Weight": 4
+              }
+            },
+            {
+              "source": "cebd2107ff2001db85851cc0e81e0667",
+              "target": "32bc3dcc7950c148d4e122043d3d16f3",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "cebd2107ff2001db85851cc0e81e0667",
+              "target": "19654cb7d7e6914273cb101436032994",
+              "attributes": {
+                "Weight": 33
+              }
+            },
+            {
+              "source": "cebd2107ff2001db85851cc0e81e0667",
+              "target": "0f601498e40c41072042d0f17974d3ba",
+              "attributes": {
+                "Weight": 23
+              }
+            },
+            {
+              "source": "cebd2107ff2001db85851cc0e81e0667",
+              "target": "07886446c247183e3a7bf03d01c3a73a",
+              "attributes": {
+                "Weight": 6
+              }
+            },
+            {
+              "source": "cebd2107ff2001db85851cc0e81e0667",
+              "target": "6a238c5f296b4d74a831bb12e737867b",
+              "attributes": {
+                "Weight": 5
+              }
+            },
+            {
+              "source": "cebd2107ff2001db85851cc0e81e0667",
+              "target": "36de514702d7b11e580390df7fbf4fc0",
+              "attributes": {
+                "Weight": 12
+              }
+            },
+            {
+              "source": "cc6159f6cba2557219c44c8ce2c66497",
+              "target": "d3fdc86e76517947b9a31ed48783312d",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "cc6159f6cba2557219c44c8ce2c66497",
+              "target": "2b13a412f0b0fc993c69b6f3816e1f89",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "4ea1b3ee637da811b7d2d0df32db21f9",
+              "target": "ef496106907ece8b169c6219e5470b2c",
+              "attributes": {
+                "Weight": 247
+              }
+            },
+            {
+              "source": "4ea1b3ee637da811b7d2d0df32db21f9",
+              "target": "218131c9ccc6fb6cacc73f2f48927d6b",
+              "attributes": {
+                "Weight": 4
+              }
+            },
+            {
+              "source": "4ea1b3ee637da811b7d2d0df32db21f9",
+              "target": "fb183c60c98ab793b11c940b8d62f994",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "4ea1b3ee637da811b7d2d0df32db21f9",
+              "target": "e5cbbbb42078a62af1fdc0c2fd6e5e49",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "4ea1b3ee637da811b7d2d0df32db21f9",
+              "target": "384dbf1274f43941625d77844fac4055",
+              "attributes": {
+                "Weight": 3
+              }
+            },
+            {
+              "source": "4ea1b3ee637da811b7d2d0df32db21f9",
+              "target": "2ad6c477e24d8adb8820fb4f419f2758",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "32bc3dcc7950c148d4e122043d3d16f3",
+              "target": "71bb50832d088324f4f4ca27a8235036",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "32bc3dcc7950c148d4e122043d3d16f3",
+              "target": "cd45e9e743ddcb9a94f61619300539a9",
+              "attributes": {
+                "Weight": 10
+              }
+            },
+            {
+              "source": "32bc3dcc7950c148d4e122043d3d16f3",
+              "target": "67c7dc338f0c3089cb68771691fdef17",
+              "attributes": {
+                "Weight": 3
+              }
+            },
+            {
+              "source": "7b50eb6b7d09bdc35e4ec94cbe0d932a",
+              "target": "d419710cc29495da65a260ede986c963",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "7b50eb6b7d09bdc35e4ec94cbe0d932a",
+              "target": "a268f4bf46e38a7ef0c2850719c0427d",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "d419710cc29495da65a260ede986c963",
+              "target": "476dc4530cd9d016c8ba93a241a640a2",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "19654cb7d7e6914273cb101436032994",
+              "target": "0f601498e40c41072042d0f17974d3ba",
+              "attributes": {
+                "Weight": 10
+              }
+            },
+            {
+              "source": "9c1bd60e5a8716769110261dc03ea2ce",
+              "target": "c2d79a022bacaf201582c68a910adc72",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "9c1bd60e5a8716769110261dc03ea2ce",
+              "target": "55bd4c4fdc1e79f2bd49bd1d4ec71ccc",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "9c1bd60e5a8716769110261dc03ea2ce",
+              "target": "de43b5a7bef0a5bf4236e47ca4e3a760",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "476dc4530cd9d016c8ba93a241a640a2",
+              "target": "636d779b3346efeaf0afa0818981f356",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "7ecca0bbe837169523936eb92f4b4677",
+              "target": "cd45e9e743ddcb9a94f61619300539a9",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "7ecca0bbe837169523936eb92f4b4677",
+              "target": "51a743e7e3599798246fadc8bcfe528e",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "cd45e9e743ddcb9a94f61619300539a9",
+              "target": "d7e837ad8409673341f42da837be915d",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "cd45e9e743ddcb9a94f61619300539a9",
+              "target": "e5cbbbb42078a62af1fdc0c2fd6e5e49",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "4498c0653cccf6599c7be11dab1eb62f",
+              "target": "51a743e7e3599798246fadc8bcfe528e",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "211a2dbcf44b6bd0742cda56af511c6e",
+              "target": "22610b1051d50403b051eba63bd73724",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "22610b1051d50403b051eba63bd73724",
+              "target": "81ab40dc2d7538651b790762fb0dd440",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "2d7673ac7b2ccae615e07c96a25594ae",
+              "target": "b61dc25e3872a878e68bde55686aa783",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "b61dc25e3872a878e68bde55686aa783",
+              "target": "a5a16db056020680a528417269741aec",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "a5a16db056020680a528417269741aec",
+              "target": "c5fff63b6151f93e1ce86d12f8acbee1",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "218131c9ccc6fb6cacc73f2f48927d6b",
+              "target": "de835c6c54fd3057e1dc3b06d49bb139",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "218131c9ccc6fb6cacc73f2f48927d6b",
+              "target": "3da96f142272f958e175363c321f8b0b",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "218131c9ccc6fb6cacc73f2f48927d6b",
+              "target": "6fc5fc52abe783e90f08b3b053b3ae6b",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "de835c6c54fd3057e1dc3b06d49bb139",
+              "target": "cb400cf0d3279925e4d1aef520576d54",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "de835c6c54fd3057e1dc3b06d49bb139",
+              "target": "b47ca91d0726e1748ababe4ea5b73996",
+              "attributes": {
+                "Weight": 3
+              }
+            },
+            {
+              "source": "36de514702d7b11e580390df7fbf4fc0",
+              "target": "428a2fe72cc5d33c611092fa44830226",
+              "attributes": {
+                "Weight": 6
+              }
+            },
+            {
+              "source": "36de514702d7b11e580390df7fbf4fc0",
+              "target": "1d881329d21d9e5d9224d73b88559a4d",
+              "attributes": {
+                "Weight": 3
+              }
+            },
+            {
+              "source": "36de514702d7b11e580390df7fbf4fc0",
+              "target": "41f90871a9bbcdda9329fae96c16a91a",
+              "attributes": {
+                "Weight": 10
+              }
+            },
+            {
+              "source": "36de514702d7b11e580390df7fbf4fc0",
+              "target": "f42911f5813da499858e57152911964c",
+              "attributes": {
+                "Weight": 3
+              }
+            },
+            {
+              "source": "36de514702d7b11e580390df7fbf4fc0",
+              "target": "c5fff63b6151f93e1ce86d12f8acbee1",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "36de514702d7b11e580390df7fbf4fc0",
+              "target": "f016cc514cc43b727ef9901b24c5c84b",
+              "attributes": {
+                "Weight": 3
+              }
+            },
+            {
+              "source": "36de514702d7b11e580390df7fbf4fc0",
+              "target": "b47ca91d0726e1748ababe4ea5b73996",
+              "attributes": {
+                "Weight": 3
+              }
+            },
+            {
+              "source": "428a2fe72cc5d33c611092fa44830226",
+              "target": "f016cc514cc43b727ef9901b24c5c84b",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "428a2fe72cc5d33c611092fa44830226",
+              "target": "d6a00d46c002e2ae3f2606df8c3018e2",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "0f601498e40c41072042d0f17974d3ba",
+              "target": "07886446c247183e3a7bf03d01c3a73a",
+              "attributes": {
+                "Weight": 3
+              }
+            },
+            {
+              "source": "06226bf2e787fb846d4385f780bdc767",
+              "target": "122a72945dc64c8d93e3c64a0a28699f",
+              "attributes": {
+                "Weight": 3
+              }
+            },
+            {
+              "source": "06226bf2e787fb846d4385f780bdc767",
+              "target": "0be31efb9a12e10f8a84b8b291b1cd12",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "122a72945dc64c8d93e3c64a0a28699f",
+              "target": "c25a782c2e19b5f6dcbbc0cbb43384f2",
+              "attributes": {
+                "Weight": 3
+              }
+            },
+            {
+              "source": "c5fff63b6151f93e1ce86d12f8acbee1",
+              "target": "de51d45081b82e917cec8afbd36b2864",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "c5fff63b6151f93e1ce86d12f8acbee1",
+              "target": "6ef412f2bc574c4b5724d70a63e43532",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "c5fff63b6151f93e1ce86d12f8acbee1",
+              "target": "900a21af59c62fd94d55897fc50e044c",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "c5fff63b6151f93e1ce86d12f8acbee1",
+              "target": "72c138549eab70677c11388360edfcef",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "c5fff63b6151f93e1ce86d12f8acbee1",
+              "target": "04bce58ed268aa56cea0cee26255d86a",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "c25a782c2e19b5f6dcbbc0cbb43384f2",
+              "target": "2e19555f6d01e41a4f08f72a6d1f92c7",
+              "attributes": {
+                "Weight": 4
+              }
+            },
+            {
+              "source": "3311fffd95f32b1e78742e7838ea7424",
+              "target": "52837298444135716c52d69497110deb",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "3311fffd95f32b1e78742e7838ea7424",
+              "target": "ae5e226c9049597aa1e55bea1f841733",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "3311fffd95f32b1e78742e7838ea7424",
+              "target": "259996fca79145b3d9f7530cb07c1ed1",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "3311fffd95f32b1e78742e7838ea7424",
+              "target": "79262e3dcbb1408a7f7799f7636a6cec",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "3311fffd95f32b1e78742e7838ea7424",
+              "target": "9c2981bc2a53f674c97a32144e94949f",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "3311fffd95f32b1e78742e7838ea7424",
+              "target": "bc088fdf7259cbbc2328b502f8f4509b",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "3311fffd95f32b1e78742e7838ea7424",
+              "target": "6eebc126e555ebf3a3a6112d007baeb9",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "3311fffd95f32b1e78742e7838ea7424",
+              "target": "0be31efb9a12e10f8a84b8b291b1cd12",
+              "attributes": {
+                "Weight": 4
+              }
+            },
+            {
+              "source": "67c7dc338f0c3089cb68771691fdef17",
+              "target": "bf19c62b0d9b4e95dfcb3188902b089c",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "bf19c62b0d9b4e95dfcb3188902b089c",
+              "target": "1503b9cbc97c53fa03f3dbbd284ec806",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "bf19c62b0d9b4e95dfcb3188902b089c",
+              "target": "45a80ed826e54d6e428d6cf821c63263",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "62c8c1b2adf9f826a33f599479a905e3",
+              "target": "a56ea8882738b3d4c77c64704b1d8244",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "62c8c1b2adf9f826a33f599479a905e3",
+              "target": "2980863e997847c1e8be13aeadce9ae8",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "a56ea8882738b3d4c77c64704b1d8244",
+              "target": "96e4c87999e8c9df8bdcc797b5a8901d",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "a56ea8882738b3d4c77c64704b1d8244",
+              "target": "dd072792958e2616f25c42541f1176a5",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "a56ea8882738b3d4c77c64704b1d8244",
+              "target": "0eb4e40717540e32926063888c310444",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "a56ea8882738b3d4c77c64704b1d8244",
+              "target": "4210e63abf4843538ca9490fbdb84618",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "a56ea8882738b3d4c77c64704b1d8244",
+              "target": "a56700218fabeed3d2c511164ba3c4b2",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "a56ea8882738b3d4c77c64704b1d8244",
+              "target": "0903358ac0da43fabd08de2f7e7fc47e",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "08c3a51e6df05754fc47024fb839c756",
+              "target": "f1e3ecf55d688708a54cab4c1614438b",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "f1e3ecf55d688708a54cab4c1614438b",
+              "target": "247712e6c3f2f3f60c827a9b12da872e",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "f1e3ecf55d688708a54cab4c1614438b",
+              "target": "29f08b8da2a44c14d5dbcde9f54d8fe7",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "40fc8017558ed4bfab67d44632f36bd7",
+              "target": "7786666ece918b5d28d9cca35cc91fb1",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "40fc8017558ed4bfab67d44632f36bd7",
+              "target": "bb9d4c2cef154c78eb4e95d7797dbe71",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "15a43417c6dc89409323af5d23e4a05f",
+              "target": "b161a8fd51d7eb3f91933afd610dcf9c",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "15a43417c6dc89409323af5d23e4a05f",
+              "target": "a52d83df025decbe490829dd59e06bd5",
+              "attributes": {
+                "Weight": 3
+              }
+            },
+            {
+              "source": "49c96b0e7a9f58c83d1e46d2fb333c43",
+              "target": "8af9e06deed7d185467f04b886ea7239",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "8af9e06deed7d185467f04b886ea7239",
+              "target": "c3f4235043e0a30dbd0e8bf1d7d767f7",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "2d96612244862a5e77737d3dafd59306",
+              "target": "3ca666ed61cb40e6eb2d5bf456378dba",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "2d96612244862a5e77737d3dafd59306",
+              "target": "1dd1be63d7ad2f0c6242994f5c4e2f6e",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "0defc93dd6d23f2e59f33c18b770e995",
+              "target": "2b1282848e7c7bb897ae0605a7eb578a",
+              "attributes": {
+                "Weight": 2
+              }
+            },
+            {
+              "source": "2b1282848e7c7bb897ae0605a7eb578a",
+              "target": "4cf56abda1129eff6d53c9ec16ab8621",
+              "attributes": {
+                "Weight": 4
+              }
+            }
+          ],
+          "options": {
+            "type": "undirected",
+            "multi": false
+          }
+        },
+        "edge_weight": "weight",
+        "height": "800px",
+        "layout": null,
+        "layout_settings": {
+          "gravity": 1,
+          "scalingRatio": 4,
+          "slowDown": 2
+        },
+        "name": null,
+        "node_metrics": {},
+        "program_settings": {},
+        "renderer_settings": {
+          "zIndex": true,
+          "enableEdgeClickEvents": false,
+          "enableEdgeHoverEvents": false,
+          "labelDensity": 1,
+          "labelGridCellSize": 250,
+          "renderEdgeLabels": true,
+          "labelFont": "sans-serif",
+          "hideEdgesOnMove": false,
+          "defaultNodeType": "point",
+          "defaultEdgeType": "curve"
+        },
+        "selected_edge": null,
+        "selected_edge_category_values": null,
+        "selected_node": null,
+        "selected_node_category_values": null,
+        "snapshot": null,
+        "start_layout": true,
+        "start_layout_for_seconds": null,
+        "sync_key": null,
+        "sync_targets": [
+          "camera",
+          "selection",
+          "layout",
+          "hover"
+        ],
+        "ui_settings": {
+          "hideInfoPanel": false,
+          "hideSearch": false
+        },
+        "visual_variables": {
+          "nodeLabel": {
+            "type": "raw",
+            "attribute": "label",
+            "default": null
+          },
+          "nodeLabelSize": {
+            "type": "continuous",
+            "range": [
+              8,
+              25
+            ],
+            "attribute": "tamanho_grau",
+            "default": 12
+          },
+          "nodeLabelColor": {
+            "type": "constant",
+            "default": "#000"
+          },
+          "nodeColor": {
+            "type": "category",
+            "attribute": "comunidade",
+            "palette": [
+              [
+                0,
+                "#1f77b4"
+              ],
+              [
+                1,
+                "#aec7e8"
+              ],
+              [
+                2,
+                "#ff7f0e"
+              ],
+              [
+                3,
+                "#ffbb78"
+              ],
+              [
+                4,
+                "#2ca02c"
+              ],
+              [
+                5,
+                "#98df8a"
+              ],
+              [
+                6,
+                "#d62728"
+              ],
+              [
+                7,
+                "#ff9896"
+              ],
+              [
+                8,
+                "#9467bd"
+              ],
+              [
+                9,
+                "#c5b0d5"
+              ],
+              [
+                10,
+                "#8c564b"
+              ],
+              [
+                11,
+                "#c49c94"
+              ],
+              [
+                12,
+                "#e377c2"
+              ],
+              [
+                13,
+                "#f7b6d2"
+              ],
+              [
+                14,
+                "#7f7f7f"
+              ],
+              [
+                15,
+                "#c7c7c7"
+              ],
+              [
+                16,
+                "#bcbd22"
+              ],
+              [
+                17,
+                "#dbdb8d"
+              ],
+              [
+                18,
+                "#17becf"
+              ],
+              [
+                19,
+                "#9edae5"
+              ],
+              [
+                20,
+                "#1f77b4"
+              ],
+              [
+                21,
+                "#aec7e8"
+              ],
+              [
+                22,
+                "#ff7f0e"
+              ],
+              [
+                23,
+                "#ffbb78"
+              ],
+              [
+                24,
+                "#2ca02c"
+              ],
+              [
+                25,
+                "#98df8a"
+              ],
+              [
+                26,
+                "#d62728"
+              ],
+              [
+                27,
+                "#ff9896"
+              ],
+              [
+                28,
+                "#9467bd"
+              ],
+              [
+                29,
+                "#c5b0d5"
+              ],
+              [
+                30,
+                "#8c564b"
+              ],
+              [
+                31,
+                "#c49c94"
+              ],
+              [
+                32,
+                "#e377c2"
+              ],
+              [
+                33,
+                "#f7b6d2"
+              ],
+              [
+                34,
+                "#7f7f7f"
+              ],
+              [
+                35,
+                "#c7c7c7"
+              ],
+              [
+                36,
+                "#bcbd22"
+              ],
+              [
+                37,
+                "#dbdb8d"
+              ],
+              [
+                38,
+                "#17becf"
+              ],
+              [
+                39,
+                "#9edae5"
+              ],
+              [
+                40,
+                "#1f77b4"
+              ],
+              [
+                41,
+                "#aec7e8"
+              ],
+              [
+                42,
+                "#ff7f0e"
+              ],
+              [
+                43,
+                "#ffbb78"
+              ],
+              [
+                44,
+                "#2ca02c"
+              ],
+              [
+                45,
+                "#98df8a"
+              ],
+              [
+                46,
+                "#d62728"
+              ],
+              [
+                47,
+                "#ff9896"
+              ],
+              [
+                48,
+                "#9467bd"
+              ],
+              [
+                49,
+                "#c5b0d5"
+              ],
+              [
+                50,
+                "#8c564b"
+              ]
+            ],
+            "default": "#999"
+          },
+          "nodeColorSaturation": {
+            "type": "disabled",
+            "default": null
+          },
+          "nodeBorderColor": {
+            "type": "disabled",
+            "default": null
+          },
+          "nodeBorderRatio": {
+            "type": "disabled",
+            "default": null
+          },
+          "nodeBorderSize": {
+            "type": "constant",
+            "default": 1
+          },
+          "nodeSize": {
+            "type": "continuous",
+            "range": [
+              3,
+              15
+            ],
+            "attribute": "tamanho_grau",
+            "default": 3
+          },
+          "nodePictogram": {
+            "type": "disabled",
+            "default": null
+          },
+          "nodePictogramColor": {
+            "type": "constant",
+            "default": "#000"
+          },
+          "nodeHaloSize": {
+            "type": "disabled",
+            "default": null
+          },
+          "nodeHaloColor": {
+            "type": "constant",
+            "default": "red"
+          },
+          "nodeShape": {
+            "type": "disabled",
+            "default": null
+          },
+          "edgeLabel": {
+            "type": "raw",
+            "attribute": "label",
+            "default": null
+          },
+          "edgeColor": {
+            "type": "category",
+            "attribute": "#ccc",
+            "default": "#ccc"
+          },
+          "edgeSize": {
+            "type": "continuous",
+            "range": [
+              0.5,
+              10
+            ],
+            "attribute": "Weight",
+            "default": 0.5
+          },
+          "edgeCurveness": {
+            "type": "constant",
+            "default": 0.25
+          }
+        }
+      }
+    }
+  }
+}
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "bf3216f45fd4408bbf8223f0b0a28b47"}
+</script>
+
+</body>
+</html>
