@@ -1,0 +1,29 @@
+body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #111; color: white; }
+
+#app { display: flex; }
+
+#text-side { width: 40%; padding: 0 5%; }
+
+.step {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    transition: opacity 0.6s;
+}
+
+.step.active { opacity: 1; }
+
+#chart-side {
+    width: 60%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a1a;
+}
+
+#viz-container { width: 80%; height: 60%; }
