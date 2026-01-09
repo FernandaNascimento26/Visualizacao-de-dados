@@ -505,7 +505,7 @@
     "role":"periphery",
     "latitude":0.0,
     "longitude":0.0,
-    "state":"N\/A",
+    "state":"",
     "ddd":0,
     "degree":1
   },
@@ -636,7 +636,7 @@
     "latitude":0.0,
     "longitude":0.0,
     "state":"Massachusetts",
-    "ddd":0,
+    "ddd":1,
     "degree":1
   },
   {
@@ -995,7 +995,7 @@
     "role":"periphery",
     "latitude":0.0,
     "longitude":0.0,
-    "state":"N\/A",
+    "state":"",
     "ddd":0,
     "degree":1
   },
@@ -1125,7 +1125,7 @@
     "role":"periphery",
     "latitude":0.0,
     "longitude":0.0,
-    "state":"N\/A",
+    "state":"",
     "ddd":0,
     "degree":1
   },
@@ -1450,98 +1450,8 @@
     "degree":1
   },
   {
-    "user_id":"a56ea8882738b3d4c77c64704b1d8244",
-    "community_id":44,
-    "role":"core",
-    "latitude":0.0,
-    "longitude":0.0,
-    "state":"SC",
-    "ddd":48,
-    "degree":7
-  },
-  {
-    "user_id":"62c8c1b2adf9f826a33f599479a905e3",
-    "community_id":44,
-    "role":"core",
-    "latitude":0.0,
-    "longitude":0.0,
-    "state":"SP",
-    "ddd":11,
-    "degree":2
-  },
-  {
-    "user_id":"96e4c87999e8c9df8bdcc797b5a8901d",
-    "community_id":44,
-    "role":"periphery",
-    "latitude":0.0,
-    "longitude":0.0,
-    "state":"RN",
-    "ddd":84,
-    "degree":1
-  },
-  {
-    "user_id":"dd072792958e2616f25c42541f1176a5",
-    "community_id":44,
-    "role":"periphery",
-    "latitude":0.0,
-    "longitude":0.0,
-    "state":"SP",
-    "ddd":11,
-    "degree":1
-  },
-  {
-    "user_id":"0eb4e40717540e32926063888c310444",
-    "community_id":44,
-    "role":"periphery",
-    "latitude":0.0,
-    "longitude":0.0,
-    "state":"DF",
-    "ddd":61,
-    "degree":1
-  },
-  {
-    "user_id":"4210e63abf4843538ca9490fbdb84618",
-    "community_id":44,
-    "role":"periphery",
-    "latitude":0.0,
-    "longitude":0.0,
-    "state":"SC",
-    "ddd":48,
-    "degree":1
-  },
-  {
-    "user_id":"a56700218fabeed3d2c511164ba3c4b2",
-    "community_id":44,
-    "role":"periphery",
-    "latitude":0.0,
-    "longitude":0.0,
-    "state":"PR",
-    "ddd":41,
-    "degree":1
-  },
-  {
-    "user_id":"2980863e997847c1e8be13aeadce9ae8",
-    "community_id":44,
-    "role":"periphery",
-    "latitude":0.0,
-    "longitude":0.0,
-    "state":"GO",
-    "ddd":62,
-    "degree":1
-  },
-  {
-    "user_id":"0903358ac0da43fabd08de2f7e7fc47e",
-    "community_id":44,
-    "role":"periphery",
-    "latitude":0.0,
-    "longitude":0.0,
-    "state":"DF",
-    "ddd":61,
-    "degree":1
-  },
-  {
     "user_id":"50a634d6abd81c068b6ff83ab09efed5",
-    "community_id":45,
+    "community_id":44,
     "role":"periphery",
     "latitude":0.0,
     "longitude":0.0,
@@ -1551,12 +1461,102 @@
   },
   {
     "user_id":"5b312a48534d4e6268b8f45210eb355c",
-    "community_id":45,
+    "community_id":44,
     "role":"periphery",
     "latitude":0.0,
     "longitude":0.0,
     "state":"RJ",
     "ddd":21,
+    "degree":1
+  },
+  {
+    "user_id":"a56ea8882738b3d4c77c64704b1d8244",
+    "community_id":45,
+    "role":"core",
+    "latitude":0.0,
+    "longitude":0.0,
+    "state":"SC",
+    "ddd":48,
+    "degree":7
+  },
+  {
+    "user_id":"62c8c1b2adf9f826a33f599479a905e3",
+    "community_id":45,
+    "role":"core",
+    "latitude":0.0,
+    "longitude":0.0,
+    "state":"SP",
+    "ddd":11,
+    "degree":2
+  },
+  {
+    "user_id":"96e4c87999e8c9df8bdcc797b5a8901d",
+    "community_id":45,
+    "role":"periphery",
+    "latitude":0.0,
+    "longitude":0.0,
+    "state":"RN",
+    "ddd":84,
+    "degree":1
+  },
+  {
+    "user_id":"dd072792958e2616f25c42541f1176a5",
+    "community_id":45,
+    "role":"periphery",
+    "latitude":0.0,
+    "longitude":0.0,
+    "state":"SP",
+    "ddd":11,
+    "degree":1
+  },
+  {
+    "user_id":"0eb4e40717540e32926063888c310444",
+    "community_id":45,
+    "role":"periphery",
+    "latitude":0.0,
+    "longitude":0.0,
+    "state":"DF",
+    "ddd":61,
+    "degree":1
+  },
+  {
+    "user_id":"4210e63abf4843538ca9490fbdb84618",
+    "community_id":45,
+    "role":"periphery",
+    "latitude":0.0,
+    "longitude":0.0,
+    "state":"SC",
+    "ddd":48,
+    "degree":1
+  },
+  {
+    "user_id":"a56700218fabeed3d2c511164ba3c4b2",
+    "community_id":45,
+    "role":"periphery",
+    "latitude":0.0,
+    "longitude":0.0,
+    "state":"PR",
+    "ddd":41,
+    "degree":1
+  },
+  {
+    "user_id":"2980863e997847c1e8be13aeadce9ae8",
+    "community_id":45,
+    "role":"periphery",
+    "latitude":0.0,
+    "longitude":0.0,
+    "state":"GO",
+    "ddd":62,
+    "degree":1
+  },
+  {
+    "user_id":"0903358ac0da43fabd08de2f7e7fc47e",
+    "community_id":45,
+    "role":"periphery",
+    "latitude":0.0,
+    "longitude":0.0,
+    "state":"DF",
+    "ddd":61,
     "degree":1
   },
   {
@@ -1656,7 +1656,7 @@
     "latitude":0.0,
     "longitude":0.0,
     "state":"Pennsylvania",
-    "ddd":0,
+    "ddd":1,
     "degree":1
   },
   {
