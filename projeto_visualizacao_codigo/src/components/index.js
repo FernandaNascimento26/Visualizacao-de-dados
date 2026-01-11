@@ -3,12 +3,18 @@ import * as butterflyChart from "./butterflyChart.js";
 import * as slopeChart from "./slopeChart.js";
 import * as mapChart from "./mapChart.js";
 import * as networkChart from "./networkChart.js";
-// import * as barChart from "./barChart.js"; // (Opcional, se não for usar)
+// NOVOS:
+import * as bubbleChart from "./bubbleChart.js";
+import * as leaderChart from "./leaderChart.js";
+import * as targetChart from "./targetChart.js";
 
 export const charts = {
-    intro: introChart,         // Conecta o tipo "intro" ao arquivo introChart
-    butterfly: butterflyChart, // Conecta "butterfly"
-    slope: slopeChart,         // Conecta "slope"
-    map: mapChart,             // Conecta "map"
-    network: networkChart   // Conecta "network"
+    intro: introChart,
+    butterfly: butterflyChart,
+    slope: slopeChart,
+    map: mapChart,
+    network: networkChart,
+    bubble: bubbleChart,  // <--- Novo
+    leader: leaderChart,  // <--- Novo
+    target: targetChart   // <--- Novo
 };

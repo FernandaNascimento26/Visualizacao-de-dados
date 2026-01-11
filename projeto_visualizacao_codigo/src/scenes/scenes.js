@@ -50,6 +50,52 @@ export const scenes = [
         class: "danger" // Cor vermelha/perigo
     },
     {
+        title: "Ato 2: Os Arquitetos (Líderes)",
+        text: "Quem está por trás do caos? No Pós-Eleição, 5 perfis concentraram 40% de toda a coordenação. O líder 'ef49' (Tocantins) emergiu do nada para se tornar o general da rede.",
+        chartType: "leader",
+        title: "Top 5 Líderes - Pós Eleição",
+        color: "#ff2a6d",
+        data: [
+            { label: "Agente TO (ef49...)", value: 764 },
+            { label: "Agente TO (4ea1...)", value: 652 },
+            { label: "Agente PB (b624...)", value: 261 },
+            { label: "Agente DF (36de...)", value: 247 },
+            { label: "Agente RJ (cebd...)", value: 133 }
+        ],
+        class: "danger"
+    },
+    {
+        title: "Ato 3: O Laboratório de Mentiras",
+        text: "Não é apenas volume, é toxicidade. Analisamos o 'Score de Desinformação' das comunidades. As bolhas verdes brilham onde a desinformação foi mais intensa. Note como grupos menores foram os mais tóxicos.",
+        chartType: "bubble",
+        title: "Intensidade de Desinformação por Grupo",
+        // Dados simulados baseados na estrutura dos seus CSVs
+        data: [
+            { id: "Grupo 25", volume: 5000, score: 95 }, // Muito tóxico
+            { id: "Grupo 13", volume: 3000, score: 80 },
+            { id: "Grupo 2", volume: 2500, score: 40 },
+            { id: "Grupo 41", volume: 1000, score: 90 },
+            { id: "Grupo 9", volume: 4000, score: 20 },  // Menos tóxico
+            { id: "Grupo 60", volume: 800, score: 85 },
+            { id: "Grupo 6", volume: 1200, score: 30 },
+            { id: "Grupo 5", volume: 1500, score: 50 }
+        ],
+        class: "danger"
+    },
+    {
+        title: "Ato 4: A Força Centrípeta (Core/Periferia)",
+        text: "A estrutura mudou. No pré-eleição, a maioria era 'Periferia' (Cinza). No Pós, eles foram sugados para o 'Core' (Vermelho). O centro do alvo ficou superpovoado, indicando centralização de comando.",
+        chartType: "target",
+        title: "Estrutura Topológica: Pós-Eleição",
+        // Gerando 50 pontos aleatórios para visualizar a massa
+        data: Array.from({length: 80}, (_, i) => ({
+            id: i,
+            // 40% Core, 60% Periferia (Simulação da sua métrica k-core)
+            role: i < 35 ? "Core" : "Periphery" 
+        })),
+        class: "danger"
+    },
+    {
         title: "Ato 4: O QG Oculto",
         text: "Todos olhavam para Brasília ou SP. Errado. O comando operacional (Core) migrou para bunkers regionais. A <b>Paraíba</b> tornou-se o epicentro ideológico.",
         chartType: "map",
