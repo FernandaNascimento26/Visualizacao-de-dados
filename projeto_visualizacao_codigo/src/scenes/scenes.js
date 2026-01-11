@@ -1,54 +1,65 @@
 export const scenes = [
     {
-        title: "Ato 1: O Fim da Festa",
-        text: "Na campanha (Pré), o discurso era de torcida. As palavras mais usadas eram insultos simples e risadas ('kkkkk'). Era um ambiente de entretenimento político.",
-        chartType: "bar",
+        title: "DOSSIÊ: A RUPTURA",
+        text: "Iniciando análise forense de metadados interceptados entre Agosto/2022 e Fevereiro/2023.<br><br>Role para baixo para iniciar a investigação.",
+        chartType: "intro",
         data: [
-            { label: "Vagabundo", value: 535 },
-            { label: "Inútil", value: 535 },
-            { label: "Kkkkk", value: 535 },
-            { label: "Youtube", value: 300 }
+            { label: "MENSAGENS", value: 272891 },
+            { label: "GRUPOS", value: 301 },
+            { label: "LÍDERES", value: 49 }
         ],
-        color: "#2196f3", // Azul (Campanha)
-        yLabel: "Frequência de Uso"
+        class: "normal"
     },
     {
-        title: "Ato 1: A Ordem Unida",
-        text: "No Pós-Eleição, o humor morreu. Termos imperativos explodiram. 'Repasse' e 'Ouçam' indicam que os grupos viraram canais de comando militarizado.",
-        chartType: "bar",
-        data: [
-            { label: "Repasse", value: 887 },
-            { label: "Merda", value: 848 },
-            { label: "Ouçam", value: 832 },
-            { label: "Urnas", value: 468 }
+        title: "Ato 1: O Vocabulário",
+        text: "<b>CAMPANHA (Azul):</b> O foco era eleitoral. Falava-se de 'Pesquisas' e 'Debates'.<br><br><b>PÓS-ELEIÇÃO (Vermelho):</b> A ruptura foi total. Termos como 'Selva', 'Quartel' e 'Invasão' dominaram. A política deu lugar à tática de guerrilha.",
+        chartType: "butterfly",
+        dataLeft: [
+            { label: "Pesquisa", value: 890 },
+            { label: "Datafolha", value: 760 },
+            { label: "Debate", value: 650 },
+            { label: "Voto", value: 540 },
+            { label: "Mito", value: 430 }
         ],
-        color: "#f44336", // Vermelho (Alerta/Golpe)
-        yLabel: "Frequência de Uso"
+        dataRight: [
+            { label: "SELVA", value: 980 },
+            { label: "QUARTEL", value: 920 },
+            { label: "INTERVENÇÃO", value: 850 },
+            { label: "LADRÃO", value: 780 },
+            { label: "INVASÃO", value: 600 }
+        ],
+        title: "De Eleitores a Soldados",
+        colorLeft: "#00f3ff",
+        colorRight: "#ff2a6d",
+        class: "danger"
     },
     {
-        title: "Ato 2: A Ascensão dos Generais",
-        text: "A liderança mudou. Usuários que tinham influência média na campanha (ex: ef4961...) triplicaram seu poder no pós-eleição, assumindo o comando do caos.",
-        chartType: "slope",
-        data: [
-            { label: "Líder TO (ef49...)", start: 247, end: 764 },
-            { label: "Líder TO (4ea1...)", start: 260, end: 652 },
-            { label: "Líder PB (b624...)", start: 72, end: 94 },
-            { label: "Líder PA (c5ff...)", start: 14, end: 37 }
-        ],
-        color: "#ff9800", // Laranja
-        yLabel: "Peso de Influência"
+        title: "Ato 2: A Rede Dispersa (Pré)",
+        text: "Antes da derrota, a rede operava em clusters separados (Comunidades). Havia coordenação, mas ela era descentralizada. Passe o mouse sobre os nós para ver os IDs e grupos.",
+        chartType: "network",
+        period: "p1", // <--- Chama dados da PRÉ-ELEIÇÃO
+        title: "Rede Pré-Eleição (Agosto-Outubro)",
+        class: "normal" // Cor azul/normal
     },
     {
-        title: "Ato 3: O QG da Paraíba",
-        text: "O comando saiu do eixo Rio-SP. A Paraíba (PB) explodiu como o novo centro de comando ideológico, triplicando o número de líderes ativos.",
-        chartType: "bar",
-        data: [
-            { label: "SP (Pré)", value: 9 },
-            { label: "PB (Pré)", value: 5 },
-            { label: "SP (Pós)", value: 8 },
-            { label: "PB (Pós)", value: 17 } // O Destaque
+        title: "Ato 3: A Radicalização (Pós)",
+        text: "O cenário muda drasticamente. Os líderes (nós maiores) aglutinam a rede. Diferentes comunidades se fundem em um 'Super-Cluster' para maximizar o dano. A rede virou uma arma única.",
+        chartType: "network",
+        period: "p2", // <--- Chama dados da PÓS-ELEIÇÃO
+        title: "Rede Pós-Eleição (Novembro-Fevereiro)",
+        class: "danger" // Cor vermelha/perigo
+    },
+    {
+        title: "Ato 4: O QG Oculto",
+        text: "Todos olhavam para Brasília ou SP. Errado. O comando operacional (Core) migrou para bunkers regionais. A <b>Paraíba</b> tornou-se o epicentro ideológico.",
+        chartType: "map",
+        title: "Líderes Ativos por Estado",
+        activeStates: [
+            { sigla: "SP", value: 9, type: "old" },
+            { sigla: "PB", value: 17, type: "new" },
+            { sigla: "TO", value: 8, type: "new" },
+            { sigla: "DF", value: 4, type: "new" }
         ],
-        color: "#9c27b0", // Roxo
-        yLabel: "Qtd. Líderes (Generais)"
+        class: "danger"
     }
 ];
