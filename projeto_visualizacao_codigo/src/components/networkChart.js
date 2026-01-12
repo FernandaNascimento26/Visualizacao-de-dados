@@ -74,6 +74,27 @@ export function update({ period, title }) {
         .force("charge", d3.forceManyBody().strength(-150))
         .force("center", d3.forceCenter(width / 2, height / 2));
 
+  
+    const initialScale = 0.7; // ajuste o nível de zoom padrão 
+    const initialTx = (width / 2) * (1 - initialScale);
+    const initialTy = (height / 2) * (1 - initialScale);
+    const initialTransform = d3.zoomIdentity.translate(initialTx, initialTy).scale(initialScale);
+
+    const zoom = d3.zoom()
+        .scaleExtent([0.1, 4]) // permitir zoom out até 0.1x e zoom in até 4x
+        .on("zoom", (event) => {
+            g.attr("transform", event.transform);
+        });
+
+    svg.call(zoom).call(zoom.transform, initialTransform);
+    svg.call(zoom);
+
+    // Double-click para resetar (zoom out para identidade)
+    svg.on("dblclick.zoom", null); // remove comportamento padrão de dblclick se existir
+    svg.on("dblclick", () => {
+        svg.transition().duration(700).call(zoom.transform, d3.zoomIdentity);
+    });
+
     // Desenha Linhas
     const link = g.append("g")
         .selectAll("line")

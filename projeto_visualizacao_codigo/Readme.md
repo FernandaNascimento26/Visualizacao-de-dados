@@ -8,10 +8,9 @@ A aplicação utiliza um layout de "scrollytelling" (painel duplo), onde a narra
 
 ## 🚀 Funcionalidades
 
-* **Navegação Sincronizada:** Avance na análise utilizando o scroll do mouse ou as setas do teclado (`←` `→` `↑` `↓`).
 * **Visualização Dinâmica:** Gráficos e cores atualizam-se em tempo real conforme a cena narrativa visível.
-* **Foco em Dados de 2022:** Baseado em métricas de órgãos de checagem e monitoramento de redes sociais.
-* **Vanilla JavaScript:** Implementação pura, sem frameworks, garantindo leveza e controle total do DOM.
+* **Foco em Dados de 2022:** Baseado em métricas de monitoramento de redes sociais.
+
 
 ## 🛠️ Tecnologias e Requisitos
 
@@ -54,5 +53,4 @@ http://127.0.0.1:8080/
 A plataforma foi desenvolvida para oferecer uma experiência de **storytelling imersivo**. A transição entre os dados, gráficos e textos é feita de forma fluida através da interação do usuário:
 
 * **Rolagem (Scroll):** Utilize a roda do mouse ou a barra de rolagem para avançar ou retornar na narrativa. Cada seção textual aciona uma mudança correspondente no gráfico lateral.
-* **Teclado (Setas):** Para uma navegação mais precisa, utilize as teclas de **Seta para Baixo/Direita** (para avançar) e **Seta para Cima/Esquerda** (para retroceder). 
 

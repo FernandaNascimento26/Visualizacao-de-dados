@@ -1,18 +1,18 @@
 export const scenes = [
     {
         title: "DOSSIÊ: A RUPTURA",
-        text: "Iniciando análise forense de metadados interceptados entre Agosto/2022 e Fevereiro/2023.<br><br>Role para baixo para iniciar a investigação.",
+        text: "Uma análise de metadados oriundos de mensagens compartilahdas na plataforma WhatsApp, referente ao período de agosto de 2022 a fevereiro de 2023 (Período Eleitoral), indicando alterações nos padrões de conexão entre grupos de extrema-direita no Brasil, com sinais de uma possível coordenação na disseminação de desinformação no período pós-eleição.",
         chartType: "intro",
         data: [
-            { label: "MENSAGENS", value: 272891 },
-            { label: "GRUPOS", value: 301 },
-            { label: "LÍDERES", value: 49 }
+            { label: "MENSAGENS ANALISADAS", value: 272891 },
+            { label: "GRUPOS MAPEADOS", value: 301 },
+            { label: "PERFIS IDENTIFICADOS", value: 49 }
         ],
         class: "normal"
     },
     {
-        title: "Ato 1: O Vocabulário",
-        text: "<b>CAMPANHA (Azul):</b> O foco era eleitoral. Falava-se de 'Pesquisas' e 'Debates'.<br><br><b>PÓS-ELEIÇÃO (Vermelho):</b> A ruptura foi total. Termos como 'Selva', 'Quartel' e 'Invasão' dominaram. A política deu lugar à tática de guerrilha.",
+        title: "TERMOS MAIS FREQUENTES NO CONTEXTO POLÍTICO",
+        text: "<b>PRÉ-ELEIÇÃO (Azul):</b> Os termos utilizados nos grupos analisados apresentavam foco predominantemente eleitoral, com destaque para temas como “pesquisas” e “debates”.<br><br><b>PÓS-ELEIÇÃO (Vermelho):</b> Observa-se uma mudança significativa no vocabulário e na dinâmica das interações, com maior recorrência de termos como “selva”, “quartel” e “invasão”. O debate político passa a incorporar referências a estratégias de organização e mobilização.",
         chartType: "butterfly",
         dataLeft: [
             { label: "Pesquisa", value: 890 },
@@ -28,47 +28,42 @@ export const scenes = [
             { label: "LADRÃO", value: 780 },
             { label: "INVASÃO", value: 600 }
         ],
-        title: "De Eleitores a Soldados",
         colorLeft: "#00f3ff",
         colorRight: "#ff2a6d",
         class: "danger"
     },
     {
-        title: "Ato 2: A Rede Dispersa (Pré)",
-        text: "Antes da derrota, a rede operava em clusters separados (Comunidades). Havia coordenação, mas ela era descentralizada. Passe o mouse sobre os nós para ver os IDs e grupos.",
-        chartType: "network",
-        period: "p1", // <--- Chama dados da PRÉ-ELEIÇÃO
         title: "Rede Pré-Eleição (Agosto-Outubro)",
-        class: "normal" // Cor azul/normal
-    },
-    {
-        title: "Ato 3: A Radicalização (Pós)",
-        text: "O cenário muda drasticamente. Os líderes (nós maiores) aglutinam a rede. Diferentes comunidades se fundem em um 'Super-Cluster' para maximizar o dano. A rede virou uma arma única.",
+        text: "Antes do resultado eleitoral, os grupos de WhatsApp encontravam-se distribuídos em clusters dispersos (comunidades), o que indica uma baixa interconexão direta entre as comunidades mapeadas, sem a presença de um núcleo dominante de articulação.<br><br> <b>Interagindo:</b> utilize o zoom e arraste a visualização para os lados para explorar melhor a estrutura. Ao posicionar o cursor do mouse sobre um nó, são exibidas métricas associadas a ele.",
         chartType: "network",
-        period: "p2", // <--- Chama dados da PÓS-ELEIÇÃO
-        title: "Rede Pós-Eleição (Novembro-Fevereiro)",
-        class: "danger" // Cor vermelha/perigo
+        period: "p1", //  dados da PRÉ-ELEIÇÃO
+        class: "normal" // Cor azul(normal)
     },
     {
-        title: "Ato 2: Os Arquitetos (Líderes)",
-        text: "Quem está por trás do caos? No Pós-Eleição, 5 perfis concentraram 40% de toda a coordenação. O líder 'ef49' (Tocantins) emergiu do nada para se tornar o general da rede.",
+        title: "Rede Pós-Eleição (Novembro-Fevereiro)",
+        text: "Observa-se uma mudança significativa no cenário. Perfis com maior capacidade de influência passam a concentrar as interações, promovendo a aproximação entre diferentes comunidades. Esse movimento sugere a existência de coordenação, ao resultar na convergência de múltiplas comunidades em uma grande estrutura integrada, o que amplia a capacidade de articulação e atuação conjunta.<br><br> <b>Interagindo:</b> utilize o zoom e arraste a visualização para os lados para explorar melhor a estrutura.",
+        chartType: "network",
+        period: "p2", // dados da PÓS-ELEIÇÃO
+        class: "danger" // Cor vermelha(perigo)
+    },
+    {
+        title: "Top 5 Perfis - Pós-Eleição",
+        text: "Quem assume maior protagonismo na dinâmica observada? No período pós-eleição, cinco perfis passaram a concentrar cerca de 40% da coordenação das interações. Entre eles, o perfil identificado como “ef49...” (UF: Tocantins) destacou-se ao ocupar uma posição de liderança relevante na articulação da rede.",
         chartType: "leader",
-        title: "Top 5 Líderes - Pós Eleição",
         color: "#ff2a6d",
         data: [
-            { label: "Agente TO (ef49...)", value: 764 },
-            { label: "Agente TO (4ea1...)", value: 652 },
-            { label: "Agente PB (b624...)", value: 261 },
-            { label: "Agente DF (36de...)", value: 247 },
-            { label: "Agente RJ (cebd...)", value: 133 }
+            { label: "ef49... UF:TO", value: 764 },
+            { label: "4ea1... UF:TO", value: 652 },
+            { label: "b624... UF:PB", value: 261 },
+            { label: "36de... UF:DF", value: 247 },
+            { label: "cebd... UF:RJ", value: 133 }
         ],
         class: "danger"
     },
     {
-        title: "Ato 3: O Laboratório de Mentiras",
-        text: "Não é apenas volume, é toxicidade. Analisamos o 'Score de Desinformação' das comunidades. As bolhas verdes brilham onde a desinformação foi mais intensa. Note como grupos menores foram os mais tóxicos.",
-        chartType: "bubble",
         title: "Intensidade de Desinformação por Grupo",
+        text: "Não se trata apenas de volume, mas da disseminação de conteúdo abusivo em larga escala. O tamanho das bolhas representa o volume de mensagens, enquanto a saturação do verde indica o nível de desinformação. Essa combinação revela onde a prática foi mais intensa e evidencia que grupos menores concentraram os níveis mais elevados desse padrão.",
+        chartType: "bubble",
         // Dados simulados baseados na estrutura dos seus CSVs
         data: [
             { id: "Grupo 25", volume: 5000, score: 95 }, // Muito tóxico
@@ -83,8 +78,7 @@ export const scenes = [
         class: "danger"
     },
     {
-        title: "Ato 4: A Força Centrípeta (Core/Periferia)",
-        text: "A estrutura mudou. No pré-eleição, a maioria era 'Periferia' (Cinza). No Pós, eles foram sugados para o 'Core' (Vermelho). O centro do alvo ficou superpovoado, indicando centralização de comando.",
+        text: "A estrutura da rede mudou ao longo do tempo, antes da eleição, a maior parte dos grupos estava na periferia (cinza). Após a eleição, muitos migraram para o núcleo central (vermelho), formando um centro muito mais concentrado. Tal movimento indica que as interações e a coordenação se tornaram mais centralizadas.",
         chartType: "target",
         title: "Estrutura Topológica: Pós-Eleição",
         // Gerando 50 pontos aleatórios para visualizar a massa
@@ -95,17 +89,22 @@ export const scenes = [
         })),
         class: "danger"
     },
-    {
-        title: "Ato 4: O QG Oculto",
-        text: "Todos olhavam para Brasília ou SP. Errado. O comando operacional (Core) migrou para bunkers regionais. A <b>Paraíba</b> tornou-se o epicentro ideológico.",
+    {   
+        title: "Perfis Ativos por Estado",
+        text: "A atenção inicial concentrava-se em polos tradicionais, como Brasília e São Paulo. No entanto, a análise indica uma redistribuição do núcleo operacional para estruturas regionais. Nesse contexto, a Paraíba passou a assumir um papel de destaque na articulação ideológica observada.",
         chartType: "map",
-        title: "Líderes Ativos por Estado",
         activeStates: [
             { sigla: "SP", value: 9, type: "old" },
             { sigla: "PB", value: 17, type: "new" },
             { sigla: "TO", value: 8, type: "new" },
             { sigla: "DF", value: 4, type: "new" }
         ],
+        class: "danger"
+    }, 
+    {
+        title: "Indícios de Coordenação no Compartilhamento de Desinformação via WhatsApp",
+        chartType: "end",
+        text: "A partir dos dados analisados, há indícios de uma possível coordenação na disseminação de desinformação, com as comunidades passando a interagir e se conectar de forma mais concentrada, o que fortaleceu a circulação de conteúdos abusivos. Dessa forma, o WhatsApp funcionou como um canal de compartilhamento intencional de informações enganosas.",
         class: "danger"
     }
 ];

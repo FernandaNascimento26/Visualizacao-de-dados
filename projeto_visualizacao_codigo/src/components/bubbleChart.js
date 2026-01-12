@@ -41,7 +41,7 @@ export function update({ data, title }) {
             // Escala de cor baseada no Score de Desinformação (0 a 100)
             // Verde Tóxico (#00ff00) para alto risco, Cinza para baixo
             const intensity = d.data.score / 100; 
-            return d3.interpolateRgb("#333333", "#00ff00")(intensity);
+            return d3.interpolateRgb("#ccead7ff", "#00ff00ff")(intensity);
         })
         .attr("stroke", "#000")
         .attr("fill-opacity", 0.7)
