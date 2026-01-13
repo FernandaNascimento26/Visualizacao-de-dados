@@ -75,7 +75,7 @@ export function update({ period, title }) {
         .force("center", d3.forceCenter(width / 2, height / 2));
 
   
-    const initialScale = 0.7; // ajuste o nível de zoom padrão 
+    const initialScale = 0.2; // ajuste o nível de zoom padrão 
     const initialTx = (width / 2) * (1 - initialScale);
     const initialTy = (height / 2) * (1 - initialScale);
     const initialTransform = d3.zoomIdentity.translate(initialTx, initialTy).scale(initialScale);

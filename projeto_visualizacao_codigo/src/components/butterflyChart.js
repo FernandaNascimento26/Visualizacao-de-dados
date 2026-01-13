@@ -12,6 +12,8 @@ export function init(selector) {
 }
 
 export function update({ dataLeft, dataRight, colorLeft, colorRight, title }) {
+
+
     svg.selectAll("*").remove();
     
     // Título Principal
@@ -43,23 +45,76 @@ export function update({ dataLeft, dataRight, colorLeft, colorRight, title }) {
 
     const g = svg.append("g").attr("transform", `translate(0, ${margin.top + 20})`);
 
-    // --- LADO ESQUERDO (AZUL) ---
+
+    // Legenda (cada legenda fica no mesmo lado da sua cor)
+    const legendY = 460;
+    const legendBox = 14;
+    const legendGap = 8;
+
+    // Lado esquerdo - Pré-eleição
+    const legendLeft = svg.append("g")
+        .attr("class", "legend-left")
+        .attr("transform", `translate(${center - gap - 120}, ${legendY})`);
+
+    legendLeft.append("rect")
+        .attr("x", 0)
+        .attr("y", -legendBox/2)
+        .attr("width", legendBox)
+        .attr("height", legendBox)
+        .attr("fill", colorLeft)
+        .attr("rx", 3);
+
+    legendLeft.append("text")
+        .attr("x", legendBox + legendGap)
+        .attr("y", 0)
+        .attr("dy", "0.35em")
+        .attr("fill", "#fff")
+        .style("font-size", "13px")
+        .style("font-family", "Roboto Mono")
+        .text("Pré-eleição");
+
+    // Lado direito - Pós-eleição
+    const legendRight = svg.append("g")
+        .attr("class", "legend-right")
+        .attr("transform", `translate(${center + gap + 20}, ${legendY})`);
+
+    legendRight.append("rect")
+        .attr("x", 0)
+        .attr("y", -legendBox/2)
+        .attr("width", legendBox)
+        .attr("height", legendBox)
+        .attr("fill", colorRight)
+        .attr("rx", 3);
+
+    legendRight.append("text")
+        .attr("x", legendBox + legendGap)
+        .attr("y", 0)
+        .attr("dy", "0.35em")
+        .attr("fill", "#fff")
+        .style("font-size", "13px")
+        .style("font-family", "Roboto Mono")
+        .text("Pós-eleição");
+
+
+        
+    // --- LADO ESQUERDO  ---
     dataLeft.forEach((d, i) => {
         const y = i * rowHeight;
         const barWidth = xScale(d.value);
         
         const row = g.append("g").attr("class", "row-left");
 
-        // 1. O Rótulo (AGORA EM CIMA DA BARRA)
+        // 1. O Rótulo 
         // Alinhado à direita do seu bloco (perto do centro)
         row.append("text")
             .attr("x", center - gap) 
             .attr("y", y) 
             .attr("text-anchor", "end") 
-            .attr("fill", "#aaa")
+            .attr("fill", "#fff")
             .style("font-family", "Roboto Mono")
             .style("font-size", "14px")
             .style("font-weight", "bold")
+            .style("text-transform", "uppercase") // Caixa alta para impacto
             .text(d.label);
 
         // 2. A Barra
@@ -82,7 +137,7 @@ export function update({ dataLeft, dataRight, colorLeft, colorRight, title }) {
             .text(d.value);
     });
 
-    // --- LADO DIREITO (VERMELHO) ---
+    // --- LADO DIREITO  ---
     dataRight.forEach((d, i) => {
         const y = i * rowHeight;
         const barWidth = xScale(d.value);

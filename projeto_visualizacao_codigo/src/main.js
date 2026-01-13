@@ -1,6 +1,8 @@
 import { scenes } from "./scenes/scenes.js";
 import { renderScene } from "./controller/sceneController.js";
 
+
+
 function setup() {
     const textSide = document.getElementById("text-side");
 
@@ -18,6 +20,7 @@ function setup() {
         `;
         textSide.appendChild(div);
     });
+
 
     // 2. Configura o ScrollSpy (IntersectionObserver)
     const observer = new IntersectionObserver((entries) => {
