@@ -7,6 +7,7 @@ import * as bubbleChart from "./bubbleChart.js";
 import * as leaderChart from "./leaderChart.js";
 import * as targetChart from "./targetChart.js";
 import * as endChart from "./endChart.js";
+import * as morphingNetwork from "./morphingNetwork.js";
 
 export const charts = {
     intro: introChart,
@@ -17,5 +18,6 @@ export const charts = {
     bubble: bubbleChart,  
     leader: leaderChart, 
     target: targetChart,
-    end: endChart   
+    end: endChart,  
+    morphing: morphingNetwork
 };

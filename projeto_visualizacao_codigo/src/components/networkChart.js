@@ -4,149 +4,146 @@ let svg, width = 800, height = 600;
 let simulation;
 let tooltip;
 
+// 1. Criamos uma escala de cores automática (Paleta Tableau 10 ou Set3 para mais variedade)
+// O D3 vai atribuir uma cor única para cada ID de grupo que encontrar
+const colorScale = d3.scaleOrdinal(d3.schemeTableau10); 
+
 export function init(selector) {
-    // 1. Limpeza geral
+    // Limpeza
     d3.select(selector).select("svg").remove();
     d3.select("body").selectAll(".network-tooltip").remove();
 
-    // 2. Container SVG
+    // SVG
     svg = d3.select(selector).append("svg")
         .attr("width", "100%")
         .attr("height", "100%")
         .attr("viewBox", `0 0 ${width} ${height}`);
 
-    // 3. Tooltip
+    // Tooltip
     tooltip = d3.select("body").append("div")
         .attr("class", "network-tooltip")
         .style("position", "absolute")
         .style("visibility", "hidden")
-        .style("background", "rgba(0, 0, 0, 0.9)")
-        .style("border", "1px solid #00f3ff")
-        .style("padding", "8px")
-        .style("border-radius", "4px")
+        .style("background", "rgba(10, 10, 10, 0.95)") 
+        .style("border", "1px solid #444") // Borda neutra inicial
+        .style("padding", "15px")
+        .style("border-radius", "8px")
         .style("color", "#fff")
         .style("font-family", "Courier New")
         .style("font-size", "12px")
         .style("pointer-events", "none")
-        .style("z-index", "9999");
+        .style("z-index", "9999")
+        .style("box-shadow", "0 0 15px rgba(0, 0, 0, 0.5)")
+        .style("min-width", "220px")
+        .style("text-align", "center");
 }
 
 export function update({ period, title }) {
     svg.selectAll("*").remove();
 
     // Título
-    svg.append("text")
-        .attr("x", width/2)
-        .attr("y", 40)
-        .attr("text-anchor", "middle")
-        .attr("fill", "#fff")
-        .style("font-size", "22px")
-        .style("font-family", "Courier New")
-        .text(title);
+    svg.append("text").attr("x", width/2).attr("y", 40).attr("text-anchor", "middle")
+        .attr("fill", "#fff").style("font-size", "22px").style("font-family", "Courier New").text(title);
 
-    // --- CORREÇÃO DO ERRO ---
-    
-    // 1. Carrega os dados brutos
-    const rawData = networkData[period];
-    if (!rawData) {
-        console.error(`Dados para o período '${period}' não encontrados.`);
-        return;
-    }
+    // Carrega dados
+    const rawData = networkData[period] || networkData['p2'];
+    if (!rawData) return;
 
-    // 2. Faz uma cópia limpa
     const nodes = JSON.parse(JSON.stringify(rawData.nodes));
     let links = JSON.parse(JSON.stringify(rawData.links));
 
-    // 3. [IMPORTANTE] Cria um conjunto com IDs válidos
+    // Filtro de segurança
     const nodeIds = new Set(nodes.map(n => n.id));
-
-    // 4. [IMPORTANTE] Remove links que apontam para nós que não existem
-    // Isso evita o erro "node not found"
     links = links.filter(l => nodeIds.has(l.source) && nodeIds.has(l.target));
-
-    console.log(`Renderizando ${nodes.length} nós e ${links.length} conexões.`);
 
     const g = svg.append("g");
 
     // Física
     simulation = d3.forceSimulation(nodes)
-        .force("link", d3.forceLink(links).id(d => d.id).distance(60))
-        .force("charge", d3.forceManyBody().strength(-150))
-        .force("center", d3.forceCenter(width / 2, height / 2));
+        .force("link", d3.forceLink(links).id(d => d.id).distance(50))
+        .force("charge", d3.forceManyBody().strength(-100))
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .force("collide", d3.forceCollide().radius(d => (d.val * 1.5) + 2));
 
-  
-    const initialScale = 0.2; // ajuste o nível de zoom padrão 
-    const initialTx = (width / 2) * (1 - initialScale);
-    const initialTy = (height / 2) * (1 - initialScale);
-    const initialTransform = d3.zoomIdentity.translate(initialTx, initialTy).scale(initialScale);
-
+    // Zoom
     const zoom = d3.zoom()
-        .scaleExtent([0.1, 4]) // permitir zoom out até 0.1x e zoom in até 4x
-        .on("zoom", (event) => {
-            g.attr("transform", event.transform);
-        });
+        .scaleExtent([0.1, 4])
+        .on("zoom", (event) => g.attr("transform", event.transform));
 
-    svg.call(zoom).call(zoom.transform, initialTransform);
-    svg.call(zoom);
+    svg.call(zoom).on("dblclick.zoom", null);
 
-    // Double-click para resetar (zoom out para identidade)
-    svg.on("dblclick.zoom", null); // remove comportamento padrão de dblclick se existir
-    svg.on("dblclick", () => {
-        svg.transition().duration(700).call(zoom.transform, d3.zoomIdentity);
-    });
-
-    // Desenha Linhas
+    // Arestas
     const link = g.append("g")
         .selectAll("line")
-        .data(links)
-        .enter().append("line")
+        .data(links).enter().append("line")
         .attr("stroke", "#555")
         .attr("stroke-opacity", 0.6)
         .attr("stroke-width", d => Math.sqrt(d.value || 1));
 
-    // Desenha Nós
+    // Nós
     const node = g.append("g")
         .selectAll("circle")
-        .data(nodes)
-        .enter().append("circle")
-        .attr("r", d => (d.val ? d.val * 1.2 : 3) + 3)
-        .attr("fill", d => {
-            if(d.group === 2) return "#ff2a6d"; // Vermelho
-            if(d.group === 25 || d.group === 13) return "#00f3ff"; // Azul
-            return "#ffeb3b"; // Amarelo
-        })
-        .attr("stroke", "#fff").attr("stroke-width", 1.5)
-        .call(drag(simulation))
+        .data(nodes).enter().append("circle")
+        .attr("r", d => (d.val ? d.val * 1.5 : 4) + 3)
         
+        // --- AQUI ESTÁ A MUDANÇA DE COR ---
+        // Usa a escala automática baseada no número do grupo
+        .attr("fill", d => colorScale(d.group))
+        
+        .attr("stroke", "#fff").attr("stroke-width", 1)
+        .call(drag(simulation))
+
         // Interatividade
         .on("mouseover", function(event, d) {
-            d3.select(this).attr("stroke", "#00f3ff").attr("stroke-width", 3);
+            // Pega a cor exata deste nó para usar no highlight e tooltip
+            const nodeColor = colorScale(d.group);
+
+            d3.select(this)
+                .transition().duration(200)
+                .attr("stroke", "#fff")
+                .attr("stroke-width", 4)
+                .attr("r", (d.val * 1.5 + 3) * 1.4);
+            
+            const imgUrl = `public/img/clouds/user_${d.id}.png`;
+
+            // Atualiza borda do tooltip para combinar com a cor da comunidade
+            tooltip.style("border", `1px solid ${nodeColor}`)
+                   .style("box-shadow", `0 0 15px ${nodeColor}40`); // 40 é transparência hex
+
             tooltip.style("visibility", "visible")
                    .html(`
-                       <strong>ID:</strong> ${d.id.substring(0, 8)}...<br>
-                       <strong>Comunidade:</strong> ${d.group}<br>
-                       <strong>Conexões:</strong> ${d.val}
+                       <div style="border-bottom: 1px solid #333; margin-bottom: 8px; padding-bottom: 5px;">
+                           <strong style="color: ${nodeColor}; text-shadow: 0 0 5px ${nodeColor}40;">
+                               AGENTE: ${d.id.substring(0, 6)}...
+                           </strong>
+                       </div>
+                       
+                       <img src="${imgUrl}" 
+                            style="width: 200px; height: 200px; object-fit: contain; background: #000; border-radius: 4px;"
+                            onerror="this.style.display='none'; this.parentNode.insertAdjacentHTML('beforeend', '<div style=\\'padding:20px 0; color:#777; font-size:11px;\\'>Sem conteúdo tóxico detectado<br>(Score < 0.7)</div>')"
+                       />
+                       
+                       <div style="margin-top: 8px; font-size: 10px; color: #aaa;">
+                           <span style="color:${nodeColor}">●</span> Comunidade: ${d.group} | Grau: ${d.val}
+                       </div>
                    `);
         })
         .on("mousemove", function(event) {
-            tooltip.style("top", (event.pageY - 10) + "px")
-                   .style("left", (event.pageX + 15) + "px");
+            tooltip.style("top", (event.pageY - 280) + "px")
+                   .style("left", (event.pageX + 20) + "px");
         })
         .on("mouseout", function() {
-            d3.select(this).attr("stroke", "#fff").attr("stroke-width", 1.5);
+            d3.select(this)
+                .transition().duration(200)
+                .attr("stroke", "#fff").attr("stroke-width", 1)
+                .attr("r", d => (d.val ? d.val * 1.5 : 4) + 3);
             tooltip.style("visibility", "hidden");
         });
 
     simulation.on("tick", () => {
-        link
-            .attr("x1", d => d.source.x)
-            .attr("y1", d => d.source.y)
-            .attr("x2", d => d.target.x)
-            .attr("y2", d => d.target.y);
-
-        node
-            .attr("cx", d => d.x)
-            .attr("cy", d => d.y);
+        link.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
+            .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+        node.attr("cx", d => d.x).attr("cy", d => d.y);
     });
 }
 
