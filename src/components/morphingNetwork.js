@@ -28,6 +28,15 @@ export function init(selector) {
         .on("zoom", (event) => g.attr("transform", event.transform));
     svg.call(zoom).on("dblclick.zoom", null);
 
+    // Aplicar um nível de zoom padrão (centra e escala o gráfico)
+    const defaultScale = 0.4;
+    const initialTransform = d3.zoomIdentity
+        .translate((width / 2) * (1 - defaultScale), (height / 2) * (1 - defaultScale))
+        .scale(defaultScale);
+
+    // Anima a aplicação do zoom inicial para melhor efeito visual
+    svg.transition().duration(700).call(zoom.transform, initialTransform);
+
     tooltip = d3.select("body").append("div")
         .attr("class", "morph-tooltip")
         .style("position", "absolute")

@@ -1,7 +1,7 @@
 export const scenes = [
     {
         title: "DOSSIÊ: Engrenagens da Desinformação",
-        text: "Uma análise de metadados oriundos de mensagens compartilahdas na plataforma WhatsApp, referente ao período de agosto de 2022 a fevereiro de 2023 (Período Eleitoral), indicando alterações nos padrões de conexão entre grupos de extrema-direita no Brasil, com sinais de uma possível coordenação na disseminação de desinformação no período pós-eleição.",
+        text: "Uma análise de metadados oriundos de mensagens compartilhadas na plataforma WhatsApp, referente ao período de agosto de 2022 a fevereiro de 2023 (Período Eleitoral), indicando alterações nos padrões de conexão entre grupos de extrema-direita no Brasil, com sinais de uma possível coordenação na disseminação de desinformação no período pós-eleição.",
         chartType: "intro",
         data: [
             { label: "MENSAGENS ANALISADAS", value: 272891 },
@@ -45,11 +45,11 @@ export const scenes = [
         text: "Observa-se uma mudança significativa no cenário. Perfis com maior capacidade de influência passam a concentrar as interações, promovendo a aproximação entre diferentes comunidades. Esse movimento sugere a existência de coordenação, ao resultar na convergência de múltiplas comunidades em uma grande estrutura integrada, o que amplia a capacidade de articulação e atuação conjunta.<br><br> <b>Interagindo:</b> utilize o zoom e arraste a visualização para os lados para explorar melhor a estrutura.",
         chartType: "morphing",
         period: "p2", // dados da PÓS-ELEIÇÃO
-        class: "danger" 
+        class: "normal" 
     },
     {
         title: "Top 5 Perfis",
-        text: "Quem assume maior protagonismo na dinâmica observada? No período pós-eleição, cinco perfis passaram a concentrar cerca de 40% da coordenação das interações. Entre eles, o perfil identificado como “ef49...” (UF: Tocantins) destacou-se ao ocupar uma posição de liderança relevante na articulação da rede.",
+        text: "Quem assume maior protagonismo na dinâmica observada? No período pós-eleitoral, cinco perfis passaram a concentrar cerca de 40% da coordenação das interações da rede, evidenciando um processo de centralização da atividade comunicacional em torno de atores específicos. Nesse contexto, destaca-se o perfil identificado como “ef49…” (UF: Tocantins), que passa a ocupar uma posição de liderança relevante, ampliando sua capacidade de articulação e influência sobre o fluxo de interações. Esse padrão sugere um papel estratégico desse ator na organização e no direcionamento das dinâmicas observadas ao longo do período analisado. <br><br><b>Interagindo:</b> Passe o mouse sobre as barras e verifique os perfis que subriam na hierarquia de influência.",
         chartType: "leader",
         periodLeft: "p1",       
         colorLeft: "#00f3ff",   
@@ -59,19 +59,19 @@ export const scenes = [
     },
     {
         title: "O que é Desinformação?",
-        text: "Desinformação não é apenas um erro. É uma <b>arma tática</b>. <br><br>Diferente do boato inocente, ela é fabricada com uma 'assinatura' específica para manipular emoções: excesso de alarmismo, termos de urgência (<i>'Urgente! Veja! Compartilhem agora!'</i>). <br><br> Passe o mouse sobre os nós da rede ao lado. As nuvens de palavras revelam não apenas o que eles dizem, mas <b>como</b> eles manipulam o discurso em cada comunidade. <br> Para mais informações sobre as técnicas de desinformação, visite: <a href='https://www.faroldigital.info' target='_blank' style='color: #FFD700; text-decoration: underline;'>Plataforma Farol Digital</a>.",
+        text: "Desinformação : É ação ou efeito de desinformar. No contexto eleitoral ela é uma 'arma tática' fabricada com uma 'assinatura' específica para manipular emoções: excesso de alarmismo, termos de urgência (<i>'Urgente! Veja! Compartilhem agora!'</i>). <br><br><b>Interagindo:</b> Passe o mouse sobre os nós da rede ao lado. As nuvens de palavras revelam não apenas o que eles dizem, mas <b>como</b> eles manipulam o discurso em cada comunidade. <br> <b>Para mais informações:</b> Visite: <a href='https://www.faroldigital.info' target='_blank' style='color: #FFD700; text-decoration: underline;'>Plataforma Farol Digital</a>.",
         chartType: "network", 
         period: "p2",
-        class: "danger"
+        class: "normal"
     },
    {
         title: "Intensidade de Desinformação por Comunidade",
-        text: "A análise evidencia que a desinformação não depende apenas do volume, mas da intensidade do conteúdo abusivo. <br><br><b>Entenda o Gráfico:</b><br><span style='color:#00f3ff'>● Azul (Pré-Eleição)</span>: Comunidades operando com níveis menores de risco.<br><span style='color:#ff2a6d'>● Vermelho (Pós-Eleição)</span>: Explosão de toxicidade. Note como bolhas pequenas podem ter a cor vermelha intensa (Score > 0.7), provando que grupos menores podem ser altamente radicais.<br><br><b>Interagindo:</b> Posicione o cursor sobre as bolhas para ver quem são os <b>Agentes Principais</b> de cada comunidade.",
+        text: "A análise evidencia que a desinformação não depende apenas do volume, mas da intensidade do conteúdo abusivo. <br><br><b>Entenda o Gráfico:</b><br> <b>Pré-Eleição:</b> Comunidades operando com níveis menores de risco.<br> <b>Pós-Eleição:</b> Explosão de toxicidade. Note como bolhas pequenas podem ter a cor vermelha intensa (Score > 0.7), provando que grupos menores podem ser altamente radicais.<br><br><b>Interagindo:</b> Posicione o cursor sobre as bolhas para ver quem são os <b>Agentes Principais</b> de cada comunidade.",
         chartType: "bubble",
-        class: "danger" 
+        class: "normal" 
     },
     {
-        text: "A estrutura da rede mudou ao longo do tempo, antes da eleição, a maior parte dos grupos estava na periferia (cinza). Após a eleição, muitos migraram para o núcleo central (vermelho), formando um centro muito mais concentrado. Tal movimento indica que as interações e a coordenação se tornaram mais centralizadas. <br><br><b>Interatividade:</b> Passe o cursor sobre os pontos para rastrear o <b>ID do Usuário (Hash)</b> e visualizar sua trajetória individual (ex: se ele migrou da Periferia para o Centro).",
+        text: "A estrutura da rede mudou ao longo do tempo, antes da eleição, a maior parte dos grupos estava na periferia. Após a eleição, muitos migraram para o núcleo central, formando um centro muito mais concentrado. Tal movimento indica que as interações e a coordenação se tornaram mais centralizadas. <br><br><b>Interagindo:</b> Passe o cursor sobre os pontos para rastrear o <b>ID do Usuário (Hash)</b> e visualizar sua trajetória individual (ex: se ele migrou da Periferia para o Centro).",
         chartType: "target",
         title: "Estrutura Topológica: Pós-Eleição",
         periodStart: "p1",
@@ -81,7 +81,7 @@ export const scenes = [
 
     {   
         title: "Perfis Ativos por Estado",
-        text: "O mapeamento geográfico revela uma mudança estrutural crítica na rede. Enquanto o período pré-eleitoral (Azul) dependia fortemente de eixos tradicionais como <b>São Paulo</b> e <b>Brasília</b>, o pós-eleição (Vermelho) demonstra uma agressiva capilarização para o Norte e Nordeste.<br><br>O destaque é a <b>Paraíba (PB)</b>, que deixa de ser periférica para assumir protagonismo na articulação ideológica, sugerindo uma estratégia de descentralização do comando.<br><br><b>Interação:</b> Passe o cursor sobre os estados para visualizar o volume exato de usuários ativos em cada período.",
+        text: "O mapeamento geográfico revela uma mudança estrutural crítica na rede. Enquanto o período pré-eleitoral dependia fortemente de eixos tradicionais como <b>São Paulo</b> e <b>Brasília</b>, o pós-eleição demonstra uma agressiva capilarização para o Norte e Nordeste.<br><br>O destaque é a <b>Paraíba (PB)</b>, que deixa de ser periférica para assumir protagonismo na articulação ideológica, sugerindo uma estratégia de descentralização do comando.<br><br><b>Interagindo:</b> Passe o cursor sobre os estados para visualizar o volume exato de usuários ativos em cada período.",
         chartType: "map",
         dataLeft: [
             { "sigla": "SP", "value": 30, "type": "old" },

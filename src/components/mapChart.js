@@ -192,4 +192,40 @@ export async function update({
     svg.append("text").attr("class", "map-label").attr("x", (width / 4) * 3).attr("y", labelY)
         .attr("text-anchor", "middle").attr("fill", "#fff").style("font-family", "Courier New")
         .text("Pós-eleição");
+
+        // remove existing legend
+        svg.selectAll(".color-legend").remove();
+
+        const legendY = 75; // acima do mapa (map translate y = 110)
+        const legends = [
+            { x: width / 4, label: "Pólo Tradicional", color: colorByType("old") },
+            { x: (width / 4) * 3, label: "Novo Foco", color: colorByType("new") }
+        ];
+
+        const legendGroup = svg.append("g")
+            .attr("class", "color-legend")
+            .attr("transform", `translate(0, ${legendY})`);
+
+        const item = legendGroup.selectAll("g.legend-item")
+            .data(legends)
+            .join("g")
+            .attr("class", "legend-item")
+            .attr("transform", d => `translate(${d.x - 60}, 0)`);
+
+        item.append("rect")
+            .attr("x", 0)
+            .attr("y", -12)
+            .attr("width", 18)
+            .attr("height", 12)
+            .attr("rx", 3)
+            .attr("fill", d => d.color)
+            .attr("stroke", "#222");
+
+        item.append("text")
+            .attr("x", 26)
+            .attr("y", -3)
+            .attr("fill", "#fff")
+            .style("font-family", "Courier New")
+            .style("font-size", "12px")
+            .text(d => d.label);
 }

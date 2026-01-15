@@ -71,9 +71,9 @@ export function update({ title }) {
         .attr("r", 0) // Animação de entrada
         .attr("fill", d => {
             if (d.data.score >= 0.7) return "#ff0000"; // Vermelho Alerta
-            return d.data.period === "p1" ? "#00f3ff" : "#ff2a6d"; // Cores Neon Padrão
+            return d.data.period === "p1" ? "#00f2ffff" : "#cd8199ff"; // Cores Neon Padrão
         })
-        .attr("stroke", d => d.data.score >= 0.7 ? "#ffff00" : "#fff") 
+        .attr("stroke", d => d.data.score >= 0.7 ? "#000000ff" : "#fff") 
         .attr("stroke-width", d => d.data.score >= 0.7 ? 2 : 0.5)
         .attr("fill-opacity", d => d.data.score >= 0.7 ? 0.9 : 0.4)
         
@@ -82,7 +82,7 @@ export function update({ title }) {
             d3.select(this).attr("stroke", "#fff").attr("stroke-width", 3).attr("fill-opacity", 1);
             
             const isDanger = d.data.score >= 0.7;
-            const color = isDanger ? "#ff0000" : (d.data.period === "p1" ? "#00f3ff" : "#ff2a6d");
+            const color = isDanger ? "#ff0000" : (d.data.period === "p1" ? "#00f2ffff" : "#ff2a6d");
             
             // Tratamento do ID (Remove "Comunidade " se existir para limpar)
             const cleanId = d.data.id.replace(/Comunidade /i, "");
@@ -150,4 +150,37 @@ export function update({ title }) {
         .style("font-weight", "bold")
         .style("text-shadow", "0 1px 3px rgba(0,0,0,0.8)")
         .style("opacity", d => d.r > 12 ? 1 : 0); // Só mostra se couber
+
+        // 6. Legenda (inferior) — aumenta o espaçamento vertical entre gráfico e legenda
+        const legendSpacingFromBottom = 0.1; // diminuir este valor aumenta o espaço entre gráfico e legenda
+        const legend = svg.append("g")
+            .attr("class", "legend")
+            .attr("transform", `translate(${width / 2}, ${height - legendSpacingFromBottom})`)
+            .attr("text-anchor", "middle")
+            .style("font-family", "Courier New")
+            .style("font-size", "12px")
+            .style("fill", "#fff");
+
+        const legendItems = [
+            { color: "#ff0000", label: "Pós-Eleição" },
+            { color: "#00f2ffff", label: "Pré-Eleição" }
+        ];
+
+        const itemG = legend.selectAll("g")
+            .data(legendItems)
+            .enter().append("g")
+            .attr("transform", (d, i) => `translate(${(i - (legendItems.length - 1) / 2) * 140},0)`);
+
+        itemG.append("circle")
+            .attr("r", 8)
+            .attr("fill", d => d.color)
+            .attr("stroke", "#fff")
+            .attr("stroke-width", 0.8);
+
+        itemG.append("text")
+            .attr("x", 14)
+            .attr("y", 30)
+            .text(d => d.label)
+            .style("fill", "#fff")
+            .style("font-weight", "600");
 }

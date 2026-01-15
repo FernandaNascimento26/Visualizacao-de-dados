@@ -72,6 +72,15 @@ export function update({ period, title }) {
 
     svg.call(zoom).on("dblclick.zoom", null);
 
+    // Aplicar um nível de zoom padrão (centra e escala o gráfico)
+    const defaultScale = 0.2;
+    const initialTransform = d3.zoomIdentity
+        .translate((width / 2) * (1 - defaultScale), (height / 2) * (1 - defaultScale))
+        .scale(defaultScale);
+
+    // Anima a aplicação do zoom inicial para melhor efeito visual
+    svg.transition().duration(700).call(zoom.transform, initialTransform);
+
     // Arestas
     const link = g.append("g")
         .selectAll("line")
